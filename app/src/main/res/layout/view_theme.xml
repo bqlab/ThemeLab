@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center"
+    android:layout_marginBottom="10dp"
+    android:background="@color/colorWhite"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/theme_top_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:text="@string/app_no_data"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/theme_top_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:text="@string/app_no_data"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorGray"
+        android:textSize="12sp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/theme_body_01"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/colorWhiteDark"
+            tools:ignore="ContentDescription,RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/theme_body_02"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/colorWhiteDark"
+            tools:ignore="ContentDescription,RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/theme_body_03"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/colorWhiteDark"
+            tools:ignore="ContentDescription,RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/theme_body_04"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:background="@color/colorWhiteDark"
+            tools:ignore="ContentDescription,RtlSymmetry" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <Button
+            android:id="@+id/theme_bottom_preview"
+            android:layout_width="125dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/theme_preview_background"
+            android:text="@string/theme_preview"
+            android:textColor="@color/colorYellow" />
+
+        <Button
+            android:id="@+id/theme_bottom_download"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="125dp"
+            android:layout_height="35dp"
+            android:background="@color/colorYellow"
+            android:text="@string/theme_download"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</LinearLayout>
+
+

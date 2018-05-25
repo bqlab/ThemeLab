@@ -1,0 +1,30 @@
+<resources>
+
+    <style name="MainTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorWhiteDark</item>
+        <item name="colorPrimaryDark">@color/colorWhiteDark</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+    </style>
+
+    <style name="MainThemeNoActionbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorWhiteDark</item>
+        <item name="colorPrimaryDark">@color/colorWhiteDark</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/colorWhiteDark</item>
+    </style>
+
+    <style name="SearchTheme" parent="MainThemeNoActionbar">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:colorPrimaryDark">@color/colorBrownDark</item>
+    </style>
+
+    <style name="StartTheme" parent="MainThemeNoActionbar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:colorPrimaryDark">@color/colorWhite</item>
+    </style>
+
+    <style name="PreviewTheme" parent="MainThemeNoActionbar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>
