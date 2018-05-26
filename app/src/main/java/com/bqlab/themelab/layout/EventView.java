@@ -1,4 +1,4 @@
-package com.bqlab.themelab.view;
+package com.bqlab.themelab.layout;
 
 import android.content.Context;
 import android.content.Intent;

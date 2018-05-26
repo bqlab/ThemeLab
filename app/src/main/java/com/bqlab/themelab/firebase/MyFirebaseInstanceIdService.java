@@ -1,4 +1,4 @@
-package com.bqlab.themelab;
+package com.bqlab.themelab.firebase;
 
 import android.util.Log;
 

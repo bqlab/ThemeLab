@@ -1,4 +1,4 @@
-package com.bqlab.themelab.view;
+package com.bqlab.themelab.layout;
 
 import android.app.AlertDialog;
 import android.content.Context;

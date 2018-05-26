@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.View;
 
 import com.bqlab.themelab.R;
-import com.bqlab.themelab.view.ThemeView;
+import com.bqlab.themelab.layout.ThemeView;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package com.bqlab.themelab;
+package com.bqlab.themelab.firebase;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 
+import com.bqlab.themelab.R;
 import com.bqlab.themelab.activity.MainActivity;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;

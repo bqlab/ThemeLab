@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 
 import com.bqlab.themelab.R;
-import com.bqlab.themelab.view.EventView;
+import com.bqlab.themelab.layout.EventView;
 
 public class EventActivity extends AppCompatActivity {
 
@@ -25,11 +25,6 @@ public class EventActivity extends AppCompatActivity {
         n0001.setTitle(getResources().getString(R.string.notice_n0001_title));
         n0001.setContent(getResources().getString(R.string.notice_n0001_content));
         eventBody.addView(n0001);
-
-        EventView n0002 = new EventView(this);
-        n0002.setTitle(getResources().getString(R.string.notice_n0002_title));
-        n0002.setContent(getResources().getString(R.string.notice_n0002_content));
-        eventBody.addView(n0002);
     }
 
 }

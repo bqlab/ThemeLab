@@ -36,8 +36,8 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder a = new AlertDialog.Builder(SettingActivity.this);
-                a.setTitle(getResources().getString(R.string.setting_info_item01));
-                a.setMessage(getResources().getString(R.string.setting_info_item01_content));
+                a.setTitle(getResources().getString(R.string.setting_info_copyright));
+                a.setMessage(getResources().getString(R.string.setting_info_copyright_content));
                 a.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

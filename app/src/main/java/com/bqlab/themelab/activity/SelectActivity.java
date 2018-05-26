@@ -15,8 +15,8 @@ import android.widget.Toast;
 import com.bqlab.themelab.R;
 import com.bqlab.themelab.custom.NetworkDetector;
 import com.bqlab.themelab.custom.ThemeManager;
-import com.bqlab.themelab.view.ThemeNoneView;
-import com.bqlab.themelab.view.ThemeView;
+import com.bqlab.themelab.layout.ThemeNoneView;
+import com.bqlab.themelab.layout.ThemeView;
 
 import java.util.ArrayList;
 

@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/setting_user"
+                android:text="@string/app_no_data"
                 android:textColor="@color/colorGrayDark"
                 android:textSize="12sp" />
 
@@ -53,14 +53,15 @@
                 android:layout_height="60dp"
                 android:background="@color/colorWhiteDark"
                 android:paddingStart="10dp"
-                tools:ignore="RtlSymmetry">
+                tools:ignore="RtlSymmetry"
+                android:paddingLeft="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:gravity="center_vertical"
-                    android:text="@string/setting_push_item01"
+                    android:text="@string/setting_push_news"
                     android:textColor="@color/colorBlack"
                     android:textSize="14sp" />
 
@@ -71,7 +72,9 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="10dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp" />
             </RelativeLayout>
 
         </LinearLayout>
@@ -98,10 +101,11 @@
                 android:background="@color/colorWhiteDark"
                 android:gravity="center_vertical"
                 android:paddingStart="10dp"
-                android:text="@string/setting_info_item01"
+                android:text="@string/setting_info_copyright"
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp"
-                tools:ignore="RtlSymmetry" />
+                tools:ignore="RtlSymmetry"
+                android:paddingLeft="10dp" />
 
             <TextView
                 android:id="@+id/setting_info_item02"
@@ -110,10 +114,11 @@
                 android:background="@color/colorWhiteDark"
                 android:gravity="center_vertical"
                 android:paddingStart="10dp"
-                android:text="@string/setting_info_item02"
+                android:text="@string/setting_info_homepage"
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp"
-                tools:ignore="RtlSymmetry" />
+                tools:ignore="RtlSymmetry"
+                android:paddingLeft="10dp" />
 
         </LinearLayout>
 
