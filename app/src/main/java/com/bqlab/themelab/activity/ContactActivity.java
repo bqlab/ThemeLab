@@ -12,6 +12,7 @@ import com.bqlab.themelab.R;
 public class ContactActivity extends AppCompatActivity {
 
     Button contactFB;
+    Button contactIG;
     Button contactNB;
 
     @Override
@@ -23,12 +24,20 @@ public class ContactActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
 
         contactFB = (Button) findViewById(R.id.contact_btn_fb);
+        contactIG = (Button) findViewById(R.id.contact_btn_ig);
         contactNB = (Button) findViewById(R.id.contact_btn_nb);
 
         contactFB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String url = getResources().getString(R.string.contact_btn_fb_url);
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+            }
+        });
+        contactIG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = getResources().getString(R.string.contact_btn_ig_url);
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
             }
         });
