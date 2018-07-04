@@ -19,6 +19,16 @@ public class ThemeManager {
 
         this.context = context;
 
+        ThemeView c0004 = new ThemeView(context);
+        c0004.setThemeName("iMessage");
+        c0004.setThemeText("아이폰의 iMessage를 모티브로 한 비공식적인 카카오톡 테마입니다. ");
+        c0004.setThemeDownloadButton(context, "c0004", "https://drive.google.com/file/d/1dF3WRb0aiN7eOdrR5LtOfquXGzC5-56-/view?usp=sharing");
+        c0004.setThemePreviewButton(context, new ArrayList<Integer>(Arrays.asList(R.drawable.c0004_image01, R.drawable.c0004_image02, R.drawable.c0004_image04, R.drawable.c0004_image03)));
+        c0004.setThemePreviewImage(R.drawable.c0004_s_image01, R.drawable.c0004_s_image02, R.drawable.c0004_s_image03, R.drawable.c0004_s_image04);
+        c0004.setTags(new ArrayList<String>(Arrays.asList("스타일테마", "애플", "아이폰", "아이메시지", "심플", "iphone", "심플테마", "아이폰테마", "imessage", "아이폰메시지")));
+        c0004.setNoto(true);
+        themes.add(c0004);
+
         ThemeView c0003 = new ThemeView(context);
         c0003.setThemeName("iTalk(수동설치)");
         c0003.setThemeText("아이폰 메시지 테마의 구버전입니다. 아이폰을 부러워하지 마시고 이 테마를 설치해보세요.");
