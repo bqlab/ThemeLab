@@ -106,8 +106,7 @@ public class SelectActivity extends AppCompatActivity {
         selectTopBoardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = getResources().getString(R.string.main_request_btn06_url);
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                startActivity(new Intent(SelectActivity.this, ContactActivity.class));
             }
         });
 

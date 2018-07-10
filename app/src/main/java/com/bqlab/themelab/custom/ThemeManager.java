@@ -21,7 +21,7 @@ public class ThemeManager {
 
         ThemeView c0004 = new ThemeView(context);
         c0004.setThemeName("iMessage");
-        c0004.setThemeText("아이폰의 iMessage를 모티브로 한 비공식적인 카카오톡 테마입니다. ");
+        c0004.setThemeText("아이폰의 iMessage를 모티브로 만들어진 카카오톡 테마입니다. ");
         c0004.setThemeDownloadButton(context, "c0004", "https://drive.google.com/file/d/1dF3WRb0aiN7eOdrR5LtOfquXGzC5-56-/view?usp=sharing");
         c0004.setThemePreviewButton(context, new ArrayList<Integer>(Arrays.asList(R.drawable.c0004_image01, R.drawable.c0004_image02, R.drawable.c0004_image04, R.drawable.c0004_image03)));
         c0004.setThemePreviewImage(R.drawable.c0004_s_image01, R.drawable.c0004_s_image02, R.drawable.c0004_s_image03, R.drawable.c0004_s_image04);
