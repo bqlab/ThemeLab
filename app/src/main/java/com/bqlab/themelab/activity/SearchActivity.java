@@ -94,7 +94,7 @@ public class SearchActivity extends AppCompatActivity {
             int accur = 0;
             for (String themeTag : theme.getTags()) {
                 for (String word : words) {
-                    if (word.equals(themeTag))
+                    if (word.equalsIgnoreCase(themeTag))
                         accur++;
                 }
             }
@@ -122,8 +122,10 @@ public class SearchActivity extends AppCompatActivity {
             for (int i = 0; i < results.size(); i++) {
                 searchBody.addView(results.get(i));
             }
-        } else
+        } else {
             searchBody.addView(new ThemeNoneView(SearchActivity.this));
+            Toast.makeText(SearchActivity.this,"검색어가 포함된 결과를 찾을 수 없습니다. 철자를 정확하게 입력하였는지 다시 확인하시길 바랍니다. 원하시는 테마가 없으면 문의를 통해 신청하는 것이 가능합니다.", Toast.LENGTH_LONG).show();
+        }
     }
 }
 

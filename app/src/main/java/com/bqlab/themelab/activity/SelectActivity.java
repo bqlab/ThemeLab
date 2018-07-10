@@ -48,9 +48,9 @@ public class SelectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
-        //Initialization
-        gestureDetectorCompat = new GestureDetectorCompat(this, new MainActivityGoer());
+        getSharedPreferences("settings", MODE_PRIVATE).edit().putBoolean("TUTORIAL", false).apply();
 
+        gestureDetectorCompat = new GestureDetectorCompat(this, new MainActivityGoer());
         themeManager = new ThemeManager(this);
 
         selectTopBoardButton = (Button) findViewById(R.id.select_top_board_button);
@@ -64,7 +64,6 @@ public class SelectActivity extends AppCompatActivity {
         selectBody = (LinearLayout) findViewById(R.id.select_body);
         selectBottom = (LinearLayout) findViewById(R.id.select_bottom);
 
-        //Preparing
         for (int i = 0; i < themeManager.getThemeCount(); i++) {
             themes.add((ThemeView) themeManager.getThemeView(i));
         }
@@ -75,12 +74,10 @@ public class SelectActivity extends AppCompatActivity {
         }
         setTopButtons();
 
-        //First Theme Displaying
         for (int i = 0; i < themes.size(); i++) {
             selectBody.addView(themes.get(i));
         }
 
-        //OnClick
         selectBottom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

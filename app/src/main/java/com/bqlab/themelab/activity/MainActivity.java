@@ -1,5 +1,7 @@
 package com.bqlab.themelab.activity;
 
+import android.accessibilityservice.AccessibilityService;
+import android.app.Service;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,9 +13,13 @@ import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
     Button mainSearchButton;
     EditText mainSearchInput;
 
+    RelativeLayout mainLayout;
+    LinearLayout mainTutorial;
+    LinearLayout mainRequest;
+
+    InputMethodManager inputMethodManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +50,24 @@ public class MainActivity extends AppCompatActivity {
 
         NetworkDetector networkDetector = new NetworkDetector(this);
         final ApplicationDetector applicationDetector = new ApplicationDetector(this);
-
         gestureDetectorCompat = new GestureDetectorCompat(this, new SelectActivityGoer());
+        inputMethodManager = (InputMethodManager) getSystemService(Service.INPUT_METHOD_SERVICE);
 
         mainSearchButton = (Button) findViewById(R.id.main_search_button);
         mainSearchInput = (EditText) findViewById(R.id.main_search_input);
+        mainLayout = (RelativeLayout) findViewById(R.id.main_layout);
+        mainTutorial = (LinearLayout) findViewById(R.id.main_tutorial);
+        mainRequest = (LinearLayout) findViewById(R.id.main_request);
+
+        if (getSharedPreferences("settings", MODE_PRIVATE).getBoolean("TUTORIAL", true))
+            mainTutorial.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mainTutorial.setVisibility(View.GONE);
+                }
+            });
+        else
+            mainTutorial.setVisibility(View.GONE);
 
         if (!isCheckedGoogleDrive && !applicationDetector.hasApplication("com.google.android.apps.docs")) {
             isCheckedGoogleDrive = true;
