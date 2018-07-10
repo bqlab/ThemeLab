@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.GestureDetectorCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -13,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.bqlab.themelab.R;
+import com.bqlab.themelab.custom.ApplicationDetector;
 import com.bqlab.themelab.custom.NetworkDetector;
 import com.bqlab.themelab.custom.ThemeManager;
 import com.bqlab.themelab.layout.ThemeNoneView;
@@ -35,6 +37,7 @@ public class SelectActivity extends AppCompatActivity {
     Button selectTopButton06;
 
     LinearLayout selectBody;
+    LinearLayout selectBottom;
 
     ThemeManager themeManager;
 
@@ -59,6 +62,7 @@ public class SelectActivity extends AppCompatActivity {
         selectTopButton06 = (Button) findViewById(R.id.select_top_btn06);
 
         selectBody = (LinearLayout) findViewById(R.id.select_body);
+        selectBottom = (LinearLayout) findViewById(R.id.select_bottom);
 
         //Preparing
         for (int i = 0; i < themeManager.getThemeCount(); i++) {
@@ -75,6 +79,15 @@ public class SelectActivity extends AppCompatActivity {
         for (int i = 0; i < themes.size(); i++) {
             selectBody.addView(themes.get(i));
         }
+
+        //OnClick
+        selectBottom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = getResources().getString(R.string.select_bottom_button_url);
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+            }
+        });
     }
 
     @Override

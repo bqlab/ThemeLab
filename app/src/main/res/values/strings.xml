@@ -45,7 +45,8 @@
     <string name="select_top_btn04">창작터</string>
     <string name="select_top_btn05">스페셜</string>
     <string name="select_top_btn06">프리미엄</string>
-    <string name="select_bottom">요청하기</string>
+    <string name="select_bottom_button">개발자의 인스타그램에 문의하기</string>
+    <string name="select_bottom_button_url">https://www.instagram.com/bqlabnplay</string>
 
     <string name="theme_download">다운로드</string>
     <string name="theme_download_noto">이 테마는 수동으로 적용해야 합니다. 자세히 알아보기 버튼을 눌러 개발자의 블로그로 이동하면 어떻게 적용해야 하는지를 알려줍니다.</string>
