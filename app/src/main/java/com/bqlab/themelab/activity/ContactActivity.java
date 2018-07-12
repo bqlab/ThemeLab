@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.bqlab.themelab.R;
+import com.bqlab.themelab.custom.ApplicationDetector;
 
 public class ContactActivity extends AppCompatActivity {
 
@@ -30,8 +31,13 @@ public class ContactActivity extends AppCompatActivity {
         contactFB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = getResources().getString(R.string.contact_btn_fb_url);
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                if (new ApplicationDetector(ContactActivity.this).hasApplication("com.facebook.katana")) {
+                    String url = getResources().getString(R.string.app_fb_homepage);
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                } else {
+                    String url = getResources().getString(R.string.app_homepage);
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                }
             }
         });
         contactIG.setOnClickListener(new View.OnClickListener() {
