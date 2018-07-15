@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.GestureDetectorCompat;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -81,8 +80,13 @@ public class SelectActivity extends AppCompatActivity {
         selectBottom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = getResources().getString(R.string.select_bottom_button_url);
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                if (new ApplicationDetector(SelectActivity.this).hasApplication("com.facebook.katana")) {
+                    String url = getResources().getString(R.string.app_fb_homepage);
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                } else {
+                    String url = getResources().getString(R.string.app_homepage);
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                }
             }
         });
     }

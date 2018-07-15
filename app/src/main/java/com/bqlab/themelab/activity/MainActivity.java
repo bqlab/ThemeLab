@@ -1,6 +1,5 @@
 package com.bqlab.themelab.activity;
 
-import android.accessibilityservice.AccessibilityService;
 import android.app.Service;
 import android.content.Intent;
 import android.net.Uri;
@@ -13,7 +12,6 @@ import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -138,7 +136,13 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.main_request_06).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.main_request_btn06_url))));
+                if (new ApplicationDetector(MainActivity.this).hasApplication("com.facebook.katana")) {
+                    String url = getResources().getString(R.string.app_fb_homepage);
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                } else {
+                    String url = getResources().getString(R.string.app_homepage);
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                }
             }
         });
         findViewById(R.id.main_request_07).setOnClickListener(new View.OnClickListener() {

@@ -11,6 +11,7 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 
 import com.bqlab.themelab.R;
+import com.bqlab.themelab.custom.ApplicationDetector;
 
 public class SettingActivity extends AppCompatActivity {
 
@@ -51,7 +52,13 @@ public class SettingActivity extends AppCompatActivity {
         findViewById(R.id.setting_info_item02).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.main_request_btn06_url))));
+                if (new ApplicationDetector(SettingActivity.this).hasApplication("com.facebook.katana")) {
+                    String url = getResources().getString(R.string.app_fb_homepage);
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                } else {
+                    String url = getResources().getString(R.string.app_homepage);
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                }
             }
         });
     }
