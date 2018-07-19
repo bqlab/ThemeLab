@@ -2,8 +2,8 @@
     <string name="app_name">테마랩</string>
     <string name="app_no_data">준비중입니다.</string>
 
-    <string name="app_homepage">https://www.facebook.com/bqlabnplay</string>
-    <string name="app_fb_homepage">fb://facewebmodal/f?href=https://www.facebook.com/bqlabnplay</string>
+    <string name="app_homepage">https://www.facebook.com/bqlab</string>
+    <string name="app_fb_homepage">fb://facewebmodal/f?href=https://www.facebook.com/bqlab</string>
 
     <string name="main_search_hint">예: 심플테마, 핑크, 우주</string>
     <string name="main_request_btn01">사용 방법을 알려주세요.</string>
@@ -24,7 +24,7 @@
     <string name="contact_actionbar_title">문의하기</string>
     <string name="contact_text_title">개발자에게 문의하세요.</string>
     <string name="contact_text_body">버그가 발생했거나 개발자에게 바라는 점이 있다면 페이스북 페이지로 이동하여 문의하는 것이 가능합니다. 최하단에 위치한 링크로 이동하여 메시지를 보내주세요. 피드백, 테마 요청, 개선할 점 건의 등이 해당됩니다.\n\n원하는 테마가 없을 경우 제작을 무료로 요청할 수 있습니다. 요청받은 테마는 약간의 검토를 지나야 제작이 시작되는데, 필연적으로 저작권을 위반해야 한다면 거부됩니다. 저작권자의 허락이 있었는 지도 말해주세요.\n\n모든 서비스는 무료이며, 개발자의 취미로 운영됩니다.</string>
-    <string name="contact_btn_ig_url">https://www.instagram.com/bqlabnplay</string>
+    <string name="contact_btn_ig_url">https://www.instagram.com/bqlab</string>
     <string name="contact_btn_nb_url">https://beaqon.blog.me</string>
 
     <string name="event_actionbar_title">공지사항</string>
@@ -72,7 +72,7 @@
     <string name="notice_n0006_title">[공지] 테마를 다운로드할 때 구글 계정을 왜 묻나요?</string>
     <string name="notice_n0006_content">구글드라이브는 구글 계정이 있어야 사용할 수 있기 때문입니다. 로그인할 때 입력되는 정보는 제 능력 밖의 일이므로 확인할 방법이 없습니다.</string>
     <string name="notice_n0007_title">[공지] 테마의 저작권은 누구에게 있나요?</string>
-    <string name="notice_n0007_content">테마와 앱에 대한 모든 권리는 개발자에게 있으며, 개발자 개인 계정은 인스타그램 bqlabnplay, 페이스북 페이지 BQ Lab &amp; Play 네이버 아이디 beaqon, 플레이스토어 개발자명 BQ Lab &amp; Play 입니다. 테마의 모티브가된 대상과 이 앱이 제공하는 모든 스타일테마는 아무런 제휴 관계가 없으며 비공식이자 패러디 같은 콘텐츠라고 봐주시면 감사하겠습니다. 테마에 사용된 모든 리소스 파일은 개발자가 포토샵과 파워포인트로 창작한 것이며 모티브가 된 대상과 조금 유사할지라도 개발자 고유의 창작물입니다.</string>
+    <string name="notice_n0007_content">테마와 앱에 대한 모든 권리는 개발자에게 있으며, 개발자 개인 계정은 인스타그램 bqlabdotcom, 페이스북 페이지 BQ Lab &amp; Play 네이버 아이디 beaqon, 플레이스토어 개발자명 BQ Lab 입니다. 테마의 모티브가된 대상과 이 앱이 제공하는 모든 스타일테마는 아무런 제휴 관계가 없으며 비공식이자 패러디 같은 콘텐츠라고 봐주시면 감사하겠습니다. 테마에 사용된 모든 리소스 파일은 개발자가 포토샵과 파워포인트로 창작한 것이며 모티브가 된 대상과 조금 유사할지라도 개발자 고유의 창작물입니다.</string>
     <string name="notice_n0008_title">[공지] 테마는 어떻게 삭제하나요?</string>
     <string name="notice_n0008_content">기기에 설치된 테마 앱을 삭제하거나 카카오톡 앱의 테마 설정 화면에서 삭제할 수 있습니다. 이 앱을 삭제하는 것과 테마의 삭제는 무관합니다. 따라서 이 앱을 삭제하더라도 테마는 기기에 그대로 남아 있습니다.</string>
     
