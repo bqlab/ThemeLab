@@ -19,11 +19,21 @@ public class ThemeManager {
 
         this.context = context;
 
+        ThemeView c0006 = new ThemeView(context);
+        c0006.setThemeName("Facebook");
+        c0006.setThemeText("페이스북 앱의 인터페이스와 메신저를 모티브로 만들어진 카카오톡 테마입니다. ");
+        c0006.setThemeDownloadButton(context, "c0006", "https://drive.google.com/file/d/1B-GpL6qEK2sDBlvMikUmj_DuwYEREDZ_/view?usp=sharing");
+        c0006.setThemePreviewButton(context, new ArrayList<Integer>(Arrays.asList(R.drawable.c0006_image01, R.drawable.c0006_image02, R.drawable.c0006_image03, R.drawable.c0006_image04)));
+        c0006.setThemePreviewImage(R.drawable.c0006_s_image01, R.drawable.c0006_s_image02, R.drawable.c0006_s_image03, R.drawable.c0006_s_image04);
+        c0006.setTags(new ArrayList<String>(Arrays.asList("스타일테마", "페이스북", "facebook", "Facebook", "메시지", "페북", "페북테마", "페이스북테마", "페메", "메신저", "페북메시지", "페북메신저")));
+        c0006.setNoto(true);
+        themes.add(c0006);
+
         ThemeView c0004 = new ThemeView(context);
         c0004.setThemeName("iMessage");
         c0004.setThemeText("아이폰의 iMessage를 모티브로 만들어진 카카오톡 테마입니다. ");
         c0004.setThemeDownloadButton(context, "c0004", "https://drive.google.com/file/d/1dF3WRb0aiN7eOdrR5LtOfquXGzC5-56-/view?usp=sharing");
-        c0004.setThemePreviewButton(context, new ArrayList<Integer>(Arrays.asList(R.drawable.c0004_image01, R.drawable.c0004_image02, R.drawable.c0004_image04, R.drawable.c0004_image03)));
+        c0004.setThemePreviewButton(context, new ArrayList<Integer>(Arrays.asList(R.drawable.c0004_image01, R.drawable.c0004_image02, R.drawable.c0004_image03, R.drawable.c0004_image04)));
         c0004.setThemePreviewImage(R.drawable.c0004_s_image01, R.drawable.c0004_s_image02, R.drawable.c0004_s_image03, R.drawable.c0004_s_image04);
         c0004.setTags(new ArrayList<String>(Arrays.asList("스타일테마", "애플", "아이폰", "아이메시지", "심플", "iphone", "심플테마", "아이폰테마", "imessage", "아이폰메시지")));
         c0004.setNoto(true);
