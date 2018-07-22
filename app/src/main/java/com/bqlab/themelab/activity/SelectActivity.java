@@ -93,7 +93,7 @@ public class SelectActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(SelectActivity.this, MainActivity.class));
+        startActivity(new Intent(SelectActivity.this, OldMainActivity.class));
         overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_down);
     }
 
@@ -241,7 +241,7 @@ public class SelectActivity extends AppCompatActivity {
     private class MainActivityGoer extends GestureDetector.SimpleOnGestureListener {
         public boolean onFling(MotionEvent e1, MotionEvent e2, float vx, float vy) {
             if (e1.getY() < e2.getY()) {
-                startActivity(new Intent(SelectActivity.this, MainActivity.class));
+                startActivity(new Intent(SelectActivity.this, OldMainActivity.class));
                 overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_down);
             }
             return true;

@@ -28,19 +28,19 @@
         </activity>
         <activity
             android:name=".activity.TutorialActivity"
-            android:parentActivityName=".activity.MainActivity"
+            android:parentActivityName=".activity.OldMainActivity"
             android:theme="@style/MainTheme" />
         <activity
             android:name=".activity.ContactActivity"
-            android:parentActivityName=".activity.MainActivity"
+            android:parentActivityName=".activity.OldMainActivity"
             android:theme="@style/MainTheme" />
         <activity
             android:name=".activity.EventActivity"
-            android:parentActivityName=".activity.MainActivity"
+            android:parentActivityName=".activity.OldMainActivity"
             android:theme="@style/MainTheme" />
         <activity
             android:name=".activity.SettingActivity"
-            android:parentActivityName=".activity.MainActivity"
+            android:parentActivityName=".activity.OldMainActivity"
             android:theme="@style/MainTheme" />
         <activity
             android:name=".activity.SelectActivity"
@@ -53,7 +53,7 @@
             android:theme="@style/SearchTheme" />
         <activity
             android:name=".activity.ReportActivity"
-            android:parentActivityName=".activity.MainActivity"
+            android:parentActivityName=".activity.OldMainActivity"
             android:theme="@style/MainTheme" />
         <activity
             android:name=".activity.PreviewActivity"
