@@ -21,7 +21,7 @@ import com.bqlab.themelab.layout.ThemeView;
 
 import java.util.ArrayList;
 
-public class SelectActivity extends AppCompatActivity {
+public class OldSelectActivity extends AppCompatActivity {
 
     private GestureDetectorCompat gestureDetectorCompat;
     private boolean isClickedBackbutton = false;
@@ -45,7 +45,7 @@ public class SelectActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select);
+        setContentView(R.layout.activity_old_select);
 
         getSharedPreferences("settings", MODE_PRIVATE).edit().putBoolean("TUTORIAL", false).apply();
 
@@ -69,7 +69,7 @@ public class SelectActivity extends AppCompatActivity {
 
         NetworkDetector networkDetector = new NetworkDetector(this);
         if (!networkDetector.isConnected()) {
-            Toast.makeText(SelectActivity.this, "네트워크에 접속할 수 없습니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(OldSelectActivity.this, "네트워크에 접속할 수 없습니다.", Toast.LENGTH_SHORT).show();
         }
         setTopButtons();
 
@@ -80,7 +80,7 @@ public class SelectActivity extends AppCompatActivity {
         selectBottom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (new ApplicationDetector(SelectActivity.this).hasApplication("com.facebook.katana")) {
+                if (new ApplicationDetector(OldSelectActivity.this).hasApplication("com.facebook.katana")) {
                     String url = getResources().getString(R.string.app_fb_homepage);
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
                 } else {
@@ -93,7 +93,7 @@ public class SelectActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(SelectActivity.this, OldMainActivity.class));
+        startActivity(new Intent(OldSelectActivity.this, OldMainActivity.class));
         overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_down);
     }
 
@@ -107,7 +107,7 @@ public class SelectActivity extends AppCompatActivity {
         selectTopBoardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SelectActivity.this, ContactActivity.class));
+                startActivity(new Intent(OldSelectActivity.this, ContactActivity.class));
             }
         });
 
@@ -128,7 +128,7 @@ public class SelectActivity extends AppCompatActivity {
                     }
                 }
                 if (selectBody.getChildCount() == 0)
-                    selectBody.addView(new ThemeNoneView(SelectActivity.this));
+                    selectBody.addView(new ThemeNoneView(OldSelectActivity.this));
             }
         });
 
@@ -149,7 +149,7 @@ public class SelectActivity extends AppCompatActivity {
                     }
                 }
                 if (selectBody.getChildCount() == 0)
-                    selectBody.addView(new ThemeNoneView(SelectActivity.this));
+                    selectBody.addView(new ThemeNoneView(OldSelectActivity.this));
             }
         });
 
@@ -170,7 +170,7 @@ public class SelectActivity extends AppCompatActivity {
                     }
                 }
                 if (selectBody.getChildCount() == 0)
-                    selectBody.addView(new ThemeNoneView(SelectActivity.this));
+                    selectBody.addView(new ThemeNoneView(OldSelectActivity.this));
             }
         });
 
@@ -191,7 +191,7 @@ public class SelectActivity extends AppCompatActivity {
                     }
                 }
                 if (selectBody.getChildCount() == 0)
-                    selectBody.addView(new ThemeNoneView(SelectActivity.this));
+                    selectBody.addView(new ThemeNoneView(OldSelectActivity.this));
             }
         });
 
@@ -212,7 +212,7 @@ public class SelectActivity extends AppCompatActivity {
                     }
                 }
                 if (selectBody.getChildCount() == 0)
-                    selectBody.addView(new ThemeNoneView(SelectActivity.this));
+                    selectBody.addView(new ThemeNoneView(OldSelectActivity.this));
             }
         });
 
@@ -233,7 +233,7 @@ public class SelectActivity extends AppCompatActivity {
                     }
                 }
                 if (selectBody.getChildCount() == 0)
-                    selectBody.addView(new ThemeNoneView(SelectActivity.this));
+                    selectBody.addView(new ThemeNoneView(OldSelectActivity.this));
             }
         });
     }
@@ -241,7 +241,7 @@ public class SelectActivity extends AppCompatActivity {
     private class MainActivityGoer extends GestureDetector.SimpleOnGestureListener {
         public boolean onFling(MotionEvent e1, MotionEvent e2, float vx, float vy) {
             if (e1.getY() < e2.getY()) {
-                startActivity(new Intent(SelectActivity.this, OldMainActivity.class));
+                startActivity(new Intent(OldSelectActivity.this, OldMainActivity.class));
                 overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_down);
             }
             return true;

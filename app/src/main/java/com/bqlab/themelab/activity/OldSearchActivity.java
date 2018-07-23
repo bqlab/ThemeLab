@@ -21,7 +21,7 @@ import com.bqlab.themelab.layout.ThemeView;
 
 import java.util.ArrayList;
 
-public class SearchActivity extends AppCompatActivity {
+public class OldSearchActivity extends AppCompatActivity {
 
     NetworkDetector networkDetector = new NetworkDetector(this);
 
@@ -38,7 +38,7 @@ public class SearchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.activity_old_search);
 
         //Initialization
         themeManager = new ThemeManager(this);
@@ -56,7 +56,7 @@ public class SearchActivity extends AppCompatActivity {
         }
 
         if (!networkDetector.isConnected()) {
-            Toast.makeText(SearchActivity.this, "네트워크에 접속할 수 없습니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(OldSearchActivity.this, "네트워크에 접속할 수 없습니다.", Toast.LENGTH_SHORT).show();
         }
 
         //Displaying
@@ -123,8 +123,8 @@ public class SearchActivity extends AppCompatActivity {
                 searchBody.addView(results.get(i));
             }
         } else {
-            searchBody.addView(new ThemeNoneView(SearchActivity.this));
-            Toast.makeText(SearchActivity.this,"검색어가 포함된 결과를 찾을 수 없습니다. 철자를 정확하게 입력하였는지 다시 확인하시길 바랍니다. 원하시는 테마가 없으면 문의를 통해 신청하는 것이 가능합니다.", Toast.LENGTH_LONG).show();
+            searchBody.addView(new ThemeNoneView(OldSearchActivity.this));
+            Toast.makeText(OldSearchActivity.this,"검색어가 포함된 결과를 찾을 수 없습니다. 철자를 정확하게 입력하였는지 다시 확인하시길 바랍니다. 원하시는 테마가 없으면 문의를 통해 신청하는 것이 가능합니다.", Toast.LENGTH_LONG).show();
         }
     }
 }

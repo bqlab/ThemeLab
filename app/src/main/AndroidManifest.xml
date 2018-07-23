@@ -43,13 +43,13 @@
             android:parentActivityName=".activity.OldMainActivity"
             android:theme="@style/MainTheme" />
         <activity
-            android:name=".activity.SelectActivity"
+            android:name=".activity.OldSelectActivity"
             android:theme="@style/MainThemeNoActionbar" />
         <activity
             android:name=".activity.StartActivity"
             android:theme="@style/MainThemeNoActionbar" />
         <activity
-            android:name=".activity.SearchActivity"
+            android:name=".activity.OldSearchActivity"
             android:theme="@style/SearchTheme" />
         <activity
             android:name=".activity.ReportActivity"

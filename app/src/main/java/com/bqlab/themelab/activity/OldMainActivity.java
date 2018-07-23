@@ -44,7 +44,7 @@ public class OldMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_old);
+        setContentView(R.layout.activity_old_main);
 
         NetworkDetector networkDetector = new NetworkDetector(this);
         final ApplicationDetector applicationDetector = new ApplicationDetector(this);
@@ -77,7 +77,7 @@ public class OldMainActivity extends AppCompatActivity {
             public boolean onEditorAction(TextView textView, int actionID, KeyEvent keyEvent) {
                 if (actionID == EditorInfo.IME_ACTION_SEARCH) {
                     if (!mainSearchInput.getText().toString().isEmpty()) {
-                        Intent i = new Intent(OldMainActivity.this, SearchActivity.class);
+                        Intent i = new Intent(OldMainActivity.this, OldSearchActivity.class);
                         i.putExtra("searchWord", mainSearchInput.getEditableText().toString());
                         mainSearchInput.setText("");
                         startActivity(i);
@@ -91,7 +91,7 @@ public class OldMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!mainSearchInput.getText().toString().isEmpty()) {
-                    Intent i = new Intent(OldMainActivity.this, SearchActivity.class);
+                    Intent i = new Intent(OldMainActivity.this, OldSearchActivity.class);
                     i.putExtra("searchWord", mainSearchInput.getEditableText().toString());
                     mainSearchInput.setText("");
                     startActivity(i);
@@ -183,7 +183,7 @@ public class OldMainActivity extends AppCompatActivity {
     private class SelectActivityGoer extends GestureDetector.SimpleOnGestureListener {
         public boolean onFling(MotionEvent e1, MotionEvent e2, float vx, float vy) {
             if (e1.getY() > e2.getY()) {
-                startActivity(new Intent(OldMainActivity.this, SelectActivity.class));
+                startActivity(new Intent(OldMainActivity.this, OldSelectActivity.class));
                 overridePendingTransition(R.anim.slide_in_down, R.anim.slide_out_up);
             }
             return true;
