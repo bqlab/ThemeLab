@@ -16,8 +16,8 @@ import com.bqlab.themelab.R;
 import com.bqlab.themelab.custom.ApplicationDetector;
 import com.bqlab.themelab.custom.NetworkDetector;
 import com.bqlab.themelab.custom.ThemeManager;
-import com.bqlab.themelab.layout.ThemeNoneView;
-import com.bqlab.themelab.layout.ThemeView;
+import com.bqlab.themelab.layout.ThemeNoneLayout;
+import com.bqlab.themelab.layout.ThemeLayout;
 
 import java.util.ArrayList;
 
@@ -40,7 +40,7 @@ public class OldSelectActivity extends AppCompatActivity {
 
     ThemeManager themeManager;
 
-    ArrayList<ThemeView> themes = new ArrayList<ThemeView>();
+    ArrayList<ThemeLayout> themes = new ArrayList<ThemeLayout>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +64,7 @@ public class OldSelectActivity extends AppCompatActivity {
         selectBottom = (LinearLayout) findViewById(R.id.select_bottom);
 
         for (int i = 0; i < themeManager.getThemeCount(); i++) {
-            themes.add((ThemeView) themeManager.getThemeView(i));
+            themes.add((ThemeLayout) themeManager.getThemeView(i));
         }
 
         NetworkDetector networkDetector = new NetworkDetector(this);
@@ -128,7 +128,7 @@ public class OldSelectActivity extends AppCompatActivity {
                     }
                 }
                 if (selectBody.getChildCount() == 0)
-                    selectBody.addView(new ThemeNoneView(OldSelectActivity.this));
+                    selectBody.addView(new ThemeNoneLayout(OldSelectActivity.this));
             }
         });
 
@@ -149,7 +149,7 @@ public class OldSelectActivity extends AppCompatActivity {
                     }
                 }
                 if (selectBody.getChildCount() == 0)
-                    selectBody.addView(new ThemeNoneView(OldSelectActivity.this));
+                    selectBody.addView(new ThemeNoneLayout(OldSelectActivity.this));
             }
         });
 
@@ -170,7 +170,7 @@ public class OldSelectActivity extends AppCompatActivity {
                     }
                 }
                 if (selectBody.getChildCount() == 0)
-                    selectBody.addView(new ThemeNoneView(OldSelectActivity.this));
+                    selectBody.addView(new ThemeNoneLayout(OldSelectActivity.this));
             }
         });
 
@@ -191,7 +191,7 @@ public class OldSelectActivity extends AppCompatActivity {
                     }
                 }
                 if (selectBody.getChildCount() == 0)
-                    selectBody.addView(new ThemeNoneView(OldSelectActivity.this));
+                    selectBody.addView(new ThemeNoneLayout(OldSelectActivity.this));
             }
         });
 
@@ -212,7 +212,7 @@ public class OldSelectActivity extends AppCompatActivity {
                     }
                 }
                 if (selectBody.getChildCount() == 0)
-                    selectBody.addView(new ThemeNoneView(OldSelectActivity.this));
+                    selectBody.addView(new ThemeNoneLayout(OldSelectActivity.this));
             }
         });
 
@@ -233,7 +233,7 @@ public class OldSelectActivity extends AppCompatActivity {
                     }
                 }
                 if (selectBody.getChildCount() == 0)
-                    selectBody.addView(new ThemeNoneView(OldSelectActivity.this));
+                    selectBody.addView(new ThemeNoneLayout(OldSelectActivity.this));
             }
         });
     }

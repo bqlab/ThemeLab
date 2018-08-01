@@ -9,21 +9,21 @@ import android.widget.TextView;
 
 import com.bqlab.themelab.R;
 
-public class SearchCountView extends LinearLayout {
+public class SearchCountLayout extends LinearLayout {
 
     TextView textView;
 
-    public SearchCountView(Context context) {
+    public SearchCountLayout(Context context) {
         super(context);
         init(null, 0);
     }
 
-    public SearchCountView(Context context, AttributeSet attrs) {
+    public SearchCountLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(attrs, 0);
     }
 
-    public SearchCountView(Context context, AttributeSet attrs, int defStyle) {
+    public SearchCountLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(attrs, defStyle);
     }
@@ -34,7 +34,7 @@ public class SearchCountView extends LinearLayout {
     }
 
     private void init(AttributeSet attrs, int defStyle) {
-        LayoutInflater.from(getContext()).inflate(R.layout.view_search_count, this);
+        LayoutInflater.from(getContext()).inflate(R.layout.layout_search_count, this);
         this.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
     }
 

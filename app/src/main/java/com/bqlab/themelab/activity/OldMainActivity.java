@@ -1,29 +1,15 @@
 package com.bqlab.themelab.activity;
 
-import android.app.Service;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.view.GestureDetector;
-import android.view.KeyEvent;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bqlab.themelab.R;
-import com.bqlab.themelab.custom.ApplicationDetector;
-import com.bqlab.themelab.custom.NetworkDetector;
 
 public class OldMainActivity extends AppCompatActivity {
 
@@ -45,7 +31,7 @@ public class OldMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_old_main);
-
+        /*
         NetworkDetector networkDetector = new NetworkDetector(this);
         final ApplicationDetector applicationDetector = new ApplicationDetector(this);
         gestureDetectorCompat = new GestureDetectorCompat(this, new SelectActivityGoer());
@@ -188,5 +174,6 @@ public class OldMainActivity extends AppCompatActivity {
             }
             return true;
         }
+        */
     }
 }

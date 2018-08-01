@@ -15,9 +15,9 @@ import android.widget.Toast;
 import com.bqlab.themelab.R;
 import com.bqlab.themelab.custom.NetworkDetector;
 import com.bqlab.themelab.custom.ThemeManager;
-import com.bqlab.themelab.layout.SearchCountView;
-import com.bqlab.themelab.layout.ThemeNoneView;
-import com.bqlab.themelab.layout.ThemeView;
+import com.bqlab.themelab.layout.SearchCountLayout;
+import com.bqlab.themelab.layout.ThemeNoneLayout;
+import com.bqlab.themelab.layout.ThemeLayout;
 
 import java.util.ArrayList;
 
@@ -33,7 +33,7 @@ public class OldSearchActivity extends AppCompatActivity {
 
     String searchWord;
 
-    ArrayList<ThemeView> themes = new ArrayList<ThemeView>();
+    ArrayList<ThemeLayout> themes = new ArrayList<ThemeLayout>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class OldSearchActivity extends AppCompatActivity {
 
         //Preparing
         for (int i = 0; i < themeManager.getThemeCount(); i++) {
-            themes.add((ThemeView) themeManager.getThemeView(i));
+            themes.add((ThemeLayout) themeManager.getThemeView(i));
         }
 
         if (!networkDetector.isConnected()) {
@@ -86,11 +86,11 @@ public class OldSearchActivity extends AppCompatActivity {
         searchBody.removeAllViewsInLayout();
 
         String[] words;
-        ArrayList<ThemeView> results = new ArrayList<>();
+        ArrayList<ThemeLayout> results = new ArrayList<>();
 
         words = searchWord.split(" ");
 
-        for (ThemeView theme : themes) {
+        for (ThemeLayout theme : themes) {
             int accur = 0;
             for (String themeTag : theme.getTags()) {
                 for (String word : words) {
@@ -106,7 +106,7 @@ public class OldSearchActivity extends AppCompatActivity {
         for (int i = 0; i < results.size(); i++) {
             for (int j = 0; j < i; j++) {
                 if (results.get(j).getAccuracy() < results.get(j + 1).getAccuracy()) {
-                    ThemeView temp;
+                    ThemeLayout temp;
                     temp = results.get(j);
                     results.set(j, results.get(j + 1));
                     results.set(j + 1, temp);
@@ -115,7 +115,7 @@ public class OldSearchActivity extends AppCompatActivity {
         }
 
         if (results.size() > 0) {
-            SearchCountView searchCountView = new SearchCountView(this);
+            SearchCountLayout searchCountView = new SearchCountLayout(this);
             searchCountView.setView(results.size());
             searchBody.addView(searchCountView);
 
@@ -123,7 +123,7 @@ public class OldSearchActivity extends AppCompatActivity {
                 searchBody.addView(results.get(i));
             }
         } else {
-            searchBody.addView(new ThemeNoneView(OldSearchActivity.this));
+            searchBody.addView(new ThemeNoneLayout(OldSearchActivity.this));
             Toast.makeText(OldSearchActivity.this,"검색어가 포함된 결과를 찾을 수 없습니다. 철자를 정확하게 입력하였는지 다시 확인하시길 바랍니다. 원하시는 테마가 없으면 문의를 통해 신청하는 것이 가능합니다.", Toast.LENGTH_LONG).show();
         }
     }

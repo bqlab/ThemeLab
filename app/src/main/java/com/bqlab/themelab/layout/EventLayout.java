@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import com.bqlab.themelab.R;
 import com.bqlab.themelab.activity.NoticeActivity;
 
-public class EventView extends LinearLayout {
+public class EventLayout extends LinearLayout {
 
     private String title;
     private String content;
@@ -20,31 +20,31 @@ public class EventView extends LinearLayout {
     private Context context;
     private Button eventViewButton;
 
-    public EventView(Context context) {
+    public EventLayout(Context context) {
         super(context);
         this.context = context;
         init(null, 0);
     }
 
-    public EventView(Context context, AttributeSet attrs) {
+    public EventLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(attrs, 0);
     }
 
-    public EventView(Context context, AttributeSet attrs, int defStyle) {
+    public EventLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(attrs, defStyle);
     }
 
     private void init(AttributeSet attrs, int defStyle) {
-        LayoutInflater.from(getContext()).inflate(R.layout.view_event, this);
+        LayoutInflater.from(getContext()).inflate(R.layout.layout_event, this);
         eventViewButton = (Button) findViewById(R.id.view_event_button);
         eventViewButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(context, NoticeActivity.class);
-                i.putExtra("title", EventView.this.title);
-                i.putExtra("content", EventView.this.content);
+                i.putExtra("title", EventLayout.this.title);
+                i.putExtra("content", EventLayout.this.content);
                 context.startActivity(i);
             }
         });

@@ -22,7 +22,7 @@ import com.bqlab.themelab.custom.ApplicationDetector;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ThemeView extends LinearLayout {
+public class ThemeLayout extends LinearLayout {
 
     private int accur = 0;
     private boolean noto = false;
@@ -37,23 +37,23 @@ public class ThemeView extends LinearLayout {
     private Button themeBottomDownload;
     private ArrayList<String> tags;
 
-    public ThemeView(Context context) {
+    public ThemeLayout(Context context) {
         super(context);
         init(null, 0);
     }
 
-    public ThemeView(Context context, AttributeSet attrs) {
+    public ThemeLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(attrs, 0);
     }
 
-    public ThemeView(Context context, AttributeSet attrs, int defStyle) {
+    public ThemeLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(attrs, defStyle);
     }
 
     private void init(AttributeSet attrs, int defStyle) {
-        LayoutInflater.from(getContext()).inflate(R.layout.view_theme, this);
+        LayoutInflater.from(getContext()).inflate(R.layout.layout_theme, this);
 
         themeTopName = (TextView) findViewById(R.id.theme_top_name);
         themeTopText = (TextView) findViewById(R.id.theme_top_text);

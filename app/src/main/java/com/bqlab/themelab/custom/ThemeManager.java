@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.View;
 
 import com.bqlab.themelab.R;
-import com.bqlab.themelab.layout.ThemeView;
+import com.bqlab.themelab.layout.ThemeLayout;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,13 +13,13 @@ public class ThemeManager {
 
     private Context context;
 
-    private ArrayList<ThemeView> themes = new ArrayList<ThemeView>();
+    private ArrayList<ThemeLayout> themes = new ArrayList<ThemeLayout>();
 
     public ThemeManager(Context context) {
 
         this.context = context;
 
-        ThemeView c0006 = new ThemeView(context);
+        ThemeLayout c0006 = new ThemeLayout(context);
         c0006.setThemeName("Facebook");
         c0006.setThemeText("페이스북 앱의 인터페이스와 메신저를 모티브로 만들어진 카카오톡 테마입니다. ");
         c0006.setThemeDownloadButton(context, "c0006", "https://drive.google.com/file/d/1B-GpL6qEK2sDBlvMikUmj_DuwYEREDZ_/view?usp=sharing");
@@ -29,7 +29,7 @@ public class ThemeManager {
         c0006.setNoto(true);
         themes.add(c0006);
 
-        ThemeView c0004 = new ThemeView(context);
+        ThemeLayout c0004 = new ThemeLayout(context);
         c0004.setThemeName("iMessage");
         c0004.setThemeText("아이폰의 iMessage를 모티브로 만들어진 카카오톡 테마입니다. ");
         c0004.setThemeDownloadButton(context, "c0004", "https://drive.google.com/file/d/1dF3WRb0aiN7eOdrR5LtOfquXGzC5-56-/view?usp=sharing");
@@ -39,7 +39,7 @@ public class ThemeManager {
         c0004.setNoto(true);
         themes.add(c0004);
 
-        ThemeView c0003 = new ThemeView(context);
+        ThemeLayout c0003 = new ThemeLayout(context);
         c0003.setThemeName("iTalk(수동설치)");
         c0003.setThemeText("아이폰 메시지 테마의 구버전입니다. 아이폰을 부러워하지 마시고 이 테마를 설치해보세요.");
         c0003.setThemeDownloadButton(context, "c0003", "https://drive.google.com/file/d/0B2pLMd1a10rwV0ItNGdjME1YQms/view?usp=sharing");
@@ -49,7 +49,7 @@ public class ThemeManager {
         c0003.setNoto(true);
         themes.add(c0003);
 
-        ThemeView c0002 = new ThemeView(context);
+        ThemeLayout c0002 = new ThemeLayout(context);
         c0002.setThemeName("페이스톡(수동설치)");
         c0002.setThemeText("페이스북 테마의 구버전입니다. 페이스북의 세련된 인터페이스와 디자인을 카카오톡에 담았습니다.");
         c0002.setThemeDownloadButton(context, "c0002", "https://drive.google.com/file/d/0B2pLMd1a10rwZUU4dHBLSDVqNWs/view?usp=sharing");
@@ -59,7 +59,7 @@ public class ThemeManager {
         c0002.setNoto(true);
         themes.add(c0002);
 
-        ThemeView c0001 = new ThemeView(context);
+        ThemeLayout c0001 = new ThemeLayout(context);
         c0001.setThemeName("인스타톡(수동설치)");
         c0001.setThemeText("인스타그램 테마의 구버전입니다. 인스타그램의 그라데이션과 심플함을 카카오톡에서 느껴보세요.");
         c0001.setThemeDownloadButton(context, "c0001", "https://drive.google.com/file/d/0B2pLMd1a10rwYkM2N3h4bDhzRmc/view?usp=sharing");
@@ -75,8 +75,8 @@ public class ThemeManager {
     }
 
     public View getThemeView(int position) {
-        ThemeView themeView = new ThemeView(context);
-        themeView = this.themes.get(position);
-        return themeView;
+        ThemeLayout themeLayout = new ThemeLayout(context);
+        themeLayout = this.themes.get(position);
+        return themeLayout;
     }
 }
