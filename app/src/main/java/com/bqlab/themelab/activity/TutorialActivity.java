@@ -32,6 +32,6 @@ public class TutorialActivity extends AppCompatActivity {
         tutorialWebSettings.setLoadWithOverviewMode(true);
         tutorialWebSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 
-        tutorialWebview.loadUrl(getResources().getString(R.string.main_request_btn01_url));
+        tutorialWebview.loadUrl(getResources().getString(R.string.tutorial_url));
     }
 }

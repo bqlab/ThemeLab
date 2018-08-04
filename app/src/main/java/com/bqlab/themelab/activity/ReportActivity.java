@@ -32,6 +32,6 @@ public class ReportActivity extends AppCompatActivity {
         reportWebSettings.setLoadWithOverviewMode(true);
         reportWebSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 
-        reportWebview.loadUrl(getResources().getString(R.string.main_request_btn07_url));
+        reportWebview.loadUrl(getResources().getString(R.string.report_url));
     }
 }
