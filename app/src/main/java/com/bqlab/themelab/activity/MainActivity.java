@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     boolean isClickedBackbutton = false;
 
-    private void isHasGoogleDrive() {
+    private void hasGoogleDrive() {
         if (!new ApplicationDetector(this).hasApplication("com.google.android.apps.docs")) {
             startActivity(new Intent(this, StartActivity.class));
         }
@@ -33,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
         mainBarNews= (LinearLayout) findViewById(R.id.main_bar_news);
         mainBarSetting = (LinearLayout) findViewById(R.id.main_bar_setting);
 
+        mainBarMy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
         mainBarSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        isHasGoogleDrive();
+        hasGoogleDrive();
 
         setMainBar();
     }

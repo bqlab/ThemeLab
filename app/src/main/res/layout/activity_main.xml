@@ -7,10 +7,11 @@
     android:orientation="vertical"
     tools:context="com.bqlab.themelab.activity.MainActivity">
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/main_body"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
 
     <ImageView
         android:layout_width="match_parent"
