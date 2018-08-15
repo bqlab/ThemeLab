@@ -31,6 +31,6 @@ public class MyLayout extends FrameLayout {
 
     private void setLayoutInflation() {
         LayoutInflater.from(getContext()).inflate(R.layout.layout_my, this);
-        this.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        this.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
     }
 }
