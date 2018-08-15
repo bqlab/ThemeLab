@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bqlab.themelab.R;
@@ -18,6 +19,8 @@ import com.bqlab.themelab.layout.AdLayout;
 import com.bqlab.themelab.layout.MyLayout;
 import com.bqlab.themelab.layout.NewsLayout;
 import com.bqlab.themelab.layout.ThemesLayout;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,11 +51,23 @@ public class MainActivity extends AppCompatActivity {
         newsLayout = new NewsLayout(this);
         themesLayout = new ThemesLayout(this);
 
+        final TextView mainBarMyText = findViewById(R.id.main_bar_my_text);
+        final TextView mainBarThemesText = findViewById(R.id.main_bar_themes_text);
+        final TextView mainBarNewsText = findViewById(R.id.main_bar_news_text);
+
         mainBarMy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mainBody.removeAllViews();
                 mainBody.addView(myLayout);
+
+                mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_my_p));
+                mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_themes));
+                mainBarNews.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_news));
+
+                mainBarMyText.setTextColor(getColor(R.color.colorYellow));
+                mainBarThemesText.setTextColor(getColor(R.color.colorGrayLight));
+                mainBarNewsText.setTextColor(getColor(R.color.colorGrayLight));
             }
         });
         mainBarThemes.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +75,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 mainBody.removeAllViews();
                 mainBody.addView(themesLayout);
+
+                mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_my));
+                mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_themes_p));
+                mainBarNews.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_news));
+
+                mainBarMyText.setTextColor(getColor(R.color.colorGrayLight));
+                mainBarThemesText.setTextColor(getColor(R.color.colorYellow));
+                mainBarNewsText.setTextColor(getColor(R.color.colorGrayLight));
             }
         });
         mainBarNews.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +90,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 mainBody.removeAllViews();
                 mainBody.addView(newsLayout);
+
+                mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_my));
+                mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_themes));
+                mainBarNews.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_news_p));
+
+                mainBarMyText.setTextColor(getColor(R.color.colorGrayLight));
+                mainBarThemesText.setTextColor(getColor(R.color.colorGrayLight));
+                mainBarNewsText.setTextColor(getColor(R.color.colorYellow));
             }
         });
         mainBarSetting.setOnClickListener(new View.OnClickListener() {

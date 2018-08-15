@@ -24,8 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:gravity="center_vertical"
         android:background="@color/colorWhite"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -47,6 +47,7 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
+                android:id="@+id/main_bar_my_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/main_bar_my"
@@ -74,6 +75,7 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
+                android:id="@+id/main_bar_themes_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/main_bar_themes"
@@ -101,6 +103,7 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
+                android:id="@+id/main_bar_news_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/main_bar_news"
@@ -114,7 +117,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/ripple_gray"
             android:clickable="true"
             android:focusable="true"
             android:gravity="center"
@@ -128,6 +130,7 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
+                android:id="@+id/main_bar_setting_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/main_bar_setting"
