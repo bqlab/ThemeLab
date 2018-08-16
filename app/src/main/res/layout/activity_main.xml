@@ -129,6 +129,8 @@
                 android:background="@drawable/main_bar_setting"
                 tools:ignore="ContentDescription" />
 
+
+
             <TextView
                 android:id="@+id/main_bar_setting_text"
                 android:layout_width="wrap_content"
