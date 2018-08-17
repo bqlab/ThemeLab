@@ -10,6 +10,12 @@
     <string name="main_bar_news">소식</string>
     <string name="main_bar_setting">설정</string>
 
+    <string name="themes_search_bar">전체에서 테마 검색</string>
+    <string name="themes_category_style">스타일</string>
+    <string name="themes_category_general">일반</string>
+    <string name="themes_category_special">스페셜</string>
+    <string name="themes_category_premium">프리미엄</string>
+
     <!--
     <string name="main_search_hint">예: 심플테마, 핑크, 우주</string>
     <string name="main_request_btn01">사용 방법을 알려주세요.</string>
@@ -84,6 +90,6 @@
     <string name="notice_n0007_content">테마와 앱에 대한 모든 권리는 개발자에게 있으며, 개발자 개인 계정은 인스타그램 bqlabdotcom, 페이스북 페이지 BQ Lab &amp; Play 네이버 아이디 beaqon, 플레이스토어 개발자명 BQ Lab 입니다. 테마의 모티브가된 대상과 이 앱이 제공하는 모든 스타일테마는 아무런 제휴 관계가 없으며 비공식이자 패러디 같은 콘텐츠라고 봐주시면 감사하겠습니다. 테마에 사용된 모든 리소스 파일은 개발자가 포토샵과 파워포인트로 창작한 것이며 모티브가 된 대상과 조금 유사할지라도 개발자 고유의 창작물입니다.</string>
     <string name="notice_n0008_title">[공지] 테마는 어떻게 삭제하나요?</string>
     <string name="notice_n0008_content">기기에 설치된 테마 앱을 삭제하거나 카카오톡 앱의 테마 설정 화면에서 삭제할 수 있습니다. 이 앱을 삭제하는 것과 테마의 삭제는 무관합니다. 따라서 이 앱을 삭제하더라도 테마는 기기에 그대로 남아 있습니다.</string>
-    
+
     <string name="download_guide_text">사용자의 기기를 확인하고 있습니다.</string>
 </resources>
