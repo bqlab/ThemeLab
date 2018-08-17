@@ -24,24 +24,22 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="75"
-            android:gravity="center_vertical"
             android:orientation="vertical">
 
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:layout_width="50dp"
-                        android:layout_height="80dp" />
-                </LinearLayout>
-            </ScrollView>
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="60dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorWhite"
+                    android:elevation="5dp" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
