@@ -232,6 +232,10 @@
             <com.bqlab.themelab.layout.ThemeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
+            <com.bqlab.themelab.layout.ThemeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <LinearLayout
