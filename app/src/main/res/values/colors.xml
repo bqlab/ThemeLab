@@ -11,10 +11,10 @@
 
     <color name="colorGray">#404040</color>
     <color name="colorGrayDark">#262626</color>
-    <color name="colorGrayLighter">#9a9a9a</color>
-    <color name="colorGrayLight">#666666</color>\
+    <color name="colorGrayBrighter">#9a9a9a</color>
+    <color name="colorGrayBright">#666666</color>\
     
-    <color name="colorBlueGreenLight">#52c0b5</color>
+    <color name="colorBlueGreenBright">#52c0b5</color>
 
     <color name="colorYellow">#FBE100</color>
 

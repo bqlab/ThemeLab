@@ -1,13 +1,211 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="none">
+        android:layout_marginBottom="100dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/themes_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="65dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/themes_top_search"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/themes_top_search"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/themes_search_bar"
+                    android:inputType="text"
+                    android:paddingBottom="3dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/themes_top_sort"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/themes_top_sort"
+                    android:padding="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/themes_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/themes_category_style"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/themes_category_start"
+                    android:text="@string/themes_category_style"
+                    android:textColor="@color/colorGrayBright"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/themes_category_general"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/themes_category_mid"
+                    android:text="@string/themes_category_general"
+                    android:textColor="@color/colorGrayBright"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/themes_category_special"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/themes_category_mid"
+                    android:text="@string/themes_category_special"
+                    android:textColor="@color/colorGrayBright"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/themes_category_premium"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/themes_category_end"
+                    android:text="@string/themes_category_premium"
+                    android:textColor="@color/colorGrayBright"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/themes_body"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/themes_body_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/themes_body_today_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/themes_body_today_text"
+                        android:textColor="@color/colorGray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/themes_body_today_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/themes_body_today_text"
+                        android:text="@string/themes_body_today_hint"
+                        android:textColor="@color/colorGrayBright"
+                        android:textSize="13sp" />
+
+                    <Button
+                        android:id="@+id/themes_body_today_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@color/colorTransparent"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:text="@string/themes_body_today_more"
+                        android:textColor="@color/colorBlueGreenBright"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap" />
+                </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="80dp"
+                            android:layout_height="120dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/colorWhite" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="80dp"
+                            android:layout_height="120dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/colorWhite" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="80dp"
+                            android:layout_height="120dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/colorWhite" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="80dp"
+                            android:layout_height="120dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/colorWhite" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="80dp"
+                            android:layout_height="120dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/colorWhite" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/themes_body_board"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="300dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/themes_body_board"
+                android:text="@string/app_no_data"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -15,142 +213,44 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/themes_top"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
+            <com.bqlab.themelab.layout.ThemeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-                <LinearLayout
-                    android:layout_width="320dp"
-                    android:layout_height="65dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/themes_top_search"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+            <com.bqlab.themelab.layout.ThemeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-                    <EditText
-                        android:id="@+id/themes_top_search"
-                        android:layout_width="280dp"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:hint="@string/themes_search_bar"
-                        android:inputType="text"
-                        android:paddingBottom="3dp"
-                        android:paddingEnd="10dp"
-                        android:paddingStart="15dp"
-                        android:singleLine="true"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="16sp" />
+            <com.bqlab.themelab.layout.ThemeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-                    <Button
-                        android:id="@+id/themes_top_sort"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:background="@drawable/themes_top_sort"
-                        android:padding="20dp" />
-                </LinearLayout>
+            <com.bqlab.themelab.layout.ThemeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-                <LinearLayout
-                    android:id="@+id/themes_category"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/themes_category_style"
-                        android:layout_width="75dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/themes_category_start"
-                        android:text="@string/themes_category_style"
-                        android:textColor="@color/colorGrayLighter"
-                        android:textSize="12sp" />
-
-                    <Button
-                        android:id="@+id/themes_category_general"
-                        android:layout_width="75dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/themes_category_mid"
-                        android:text="@string/themes_category_general"
-                        android:textColor="@color/colorGrayLighter"
-                        android:textSize="12sp" />
-
-                    <Button
-                        android:id="@+id/themes_category_special"
-                        android:layout_width="75dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/themes_category_mid"
-                        android:text="@string/themes_category_special"
-                        android:textColor="@color/colorGrayLighter"
-                        android:textSize="12sp" />
-
-                    <Button
-                        android:id="@+id/themes_category_premium"
-                        android:layout_width="75dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/themes_category_end"
-                        android:text="@string/themes_category_premium"
-                        android:textColor="@color/colorGrayLighter"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/themes_body"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:id="@+id/themes_body_today"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:id="@+id/themes_body_today_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/themes_body_today_text"
-                            android:textColor="@color/colorGray"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/themes_body_today_hint"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/themes_body_today_text"
-                            android:text="@string/themes_body_today_hint"
-                            android:textColor="@color/colorGrayLight"
-                            android:textSize="13sp" />
-
-                        <Button
-                            android:id="@+id/themes_body_today_more"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:minWidth="0dp"
-                            android:minHeight="0dp"
-                            android:background="@color/colorTransparent"
-                            android:text="@string/themes_body_today_more"
-                            android:textColor="@color/colorBlueGreenLight"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
-
-                </LinearLayout>
-            </LinearLayout>
+            <com.bqlab.themelab.layout.ThemeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_no_data"
+                android:textColor="@color/colorGrayBright"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

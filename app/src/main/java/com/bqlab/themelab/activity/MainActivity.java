@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 mainBarNews.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_news));
 
                 mainBarMyText.setTextColor(getColor(R.color.colorYellow));
-                mainBarThemesText.setTextColor(getColor(R.color.colorGrayLighter));
-                mainBarNewsText.setTextColor(getColor(R.color.colorGrayLighter));
+                mainBarThemesText.setTextColor(getColor(R.color.colorGrayBrighter));
+                mainBarNewsText.setTextColor(getColor(R.color.colorGrayBrighter));
             }
         });
         mainBarThemes.setOnClickListener(new View.OnClickListener() {
@@ -74,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
                 mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_themes_p));
                 mainBarNews.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_news));
 
-                mainBarMyText.setTextColor(getColor(R.color.colorGrayLighter));
+                mainBarMyText.setTextColor(getColor(R.color.colorGrayBrighter));
                 mainBarThemesText.setTextColor(getColor(R.color.colorYellow));
-                mainBarNewsText.setTextColor(getColor(R.color.colorGrayLighter));
+                mainBarNewsText.setTextColor(getColor(R.color.colorGrayBrighter));
             }
         });
         mainBarNews.setOnClickListener(new View.OnClickListener() {
@@ -89,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
                 mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_themes));
                 mainBarNews.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_news_p));
 
-                mainBarMyText.setTextColor(getColor(R.color.colorGrayLighter));
-                mainBarThemesText.setTextColor(getColor(R.color.colorGrayLighter));
+                mainBarMyText.setTextColor(getColor(R.color.colorGrayBrighter));
+                mainBarThemesText.setTextColor(getColor(R.color.colorGrayBrighter));
                 mainBarNewsText.setTextColor(getColor(R.color.colorYellow));
             }
         });
