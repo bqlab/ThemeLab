@@ -49,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
         final TextView mainBarThemesText = findViewById(R.id.main_bar_themes_text);
         final TextView mainBarNewsText = findViewById(R.id.main_bar_news_text);
 
+        mainBody.addView(myLayout);
+        mainBarMyText.setTextColor(getColor(R.color.colorYellow));
+        mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_my_p));
+
         mainBarMy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
