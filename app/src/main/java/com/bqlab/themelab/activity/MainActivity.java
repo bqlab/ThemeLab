@@ -12,9 +12,9 @@ import android.widget.TextView;
 import com.bqlab.themelab.R;
 import com.bqlab.themelab.custom.ApplicationDetector;
 import com.bqlab.themelab.layout.AdLayout;
-import com.bqlab.themelab.layout.MyLayout;
+import com.bqlab.themelab.layout.LikeLayout;
 import com.bqlab.themelab.layout.NewsLayout;
-import com.bqlab.themelab.layout.ThemesLayout;
+import com.bqlab.themelab.layout.ShopLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout mainBarNews;
     LinearLayout mainBarSetting;
 
-    static MyLayout myLayout;
+    static LikeLayout likeLayout;
     static NewsLayout newsLayout;
-    static ThemesLayout themesLayout;
+    static ShopLayout shopLayout;
 
     private void hasGoogleDrive() {
         if (!new ApplicationDetector(this).hasApplication("com.google.android.apps.docs")) {
@@ -41,15 +41,15 @@ public class MainActivity extends AppCompatActivity {
         mainBarNews = (LinearLayout) findViewById(R.id.main_bar_news);
         mainBarSetting = (LinearLayout) findViewById(R.id.main_bar_setting);
 
-        myLayout = new MyLayout(this);
+        likeLayout = new LikeLayout(this);
         newsLayout = new NewsLayout(this);
-        themesLayout = new ThemesLayout(this);
+        shopLayout = new ShopLayout(this);
 
         final TextView mainBarMyText = findViewById(R.id.main_bar_my_text);
         final TextView mainBarThemesText = findViewById(R.id.main_bar_themes_text);
         final TextView mainBarNewsText = findViewById(R.id.main_bar_news_text);
 
-        mainBody.addView(myLayout);
+        mainBody.addView(likeLayout);
         mainBarMyText.setTextColor(getColor(R.color.colorYellow));
         mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_my_p));
 
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mainBody.removeAllViews();
-                mainBody.addView(myLayout);
+                mainBody.addView(likeLayout);
 
                 mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_my_p));
                 mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_themes));
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mainBody.removeAllViews();
-                mainBody.addView(themesLayout);
+                mainBody.addView(shopLayout);
 
                 mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_my));
                 mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_themes_p));

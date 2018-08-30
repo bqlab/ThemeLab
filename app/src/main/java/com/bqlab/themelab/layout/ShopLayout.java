@@ -8,19 +8,19 @@ import android.widget.LinearLayout;
 
 import com.bqlab.themelab.R;
 
-public class ThemesLayout extends FrameLayout {
+public class ShopLayout extends FrameLayout {
 
-    public ThemesLayout(Context context) {
+    public ShopLayout(Context context) {
         super(context);
         init(null, 0);
     }
 
-    public ThemesLayout(Context context, AttributeSet attrs) {
+    public ShopLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(attrs, 0);
     }
 
-    public ThemesLayout(Context context, AttributeSet attrs, int defStyle) {
+    public ShopLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(attrs, defStyle);
     }
@@ -30,7 +30,7 @@ public class ThemesLayout extends FrameLayout {
     }
 
     private void setLayoutInflation() {
-        LayoutInflater.from(getContext()).inflate(R.layout.layout_themes, this);
+        LayoutInflater.from(getContext()).inflate(R.layout.layout_shop, this);
         this.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
     }
 }
