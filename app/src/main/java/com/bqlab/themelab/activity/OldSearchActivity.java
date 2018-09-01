@@ -52,7 +52,7 @@ public class OldSearchActivity extends AppCompatActivity {
 
         //Preparing
         for (int i = 0; i < themeManager.getThemeCount(); i++) {
-            themes.add((ThemeLayout) themeManager.getThemeView(i));
+            themes.add((ThemeLayout) themeManager.getThemeLayout(i));
         }
 
         if (!networkDetector.isConnected()) {

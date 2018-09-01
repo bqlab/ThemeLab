@@ -25,7 +25,7 @@
                 android:layout_height="65dp"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/themes_top_search"
+                android:background="@drawable/shop_top_search"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -47,7 +47,7 @@
                     android:id="@+id/themes_top_sort"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:background="@drawable/themes_top_sort"
+                    android:background="@drawable/shop_top_sort"
                     android:padding="20dp" />
             </LinearLayout>
 
@@ -62,7 +62,7 @@
                     android:id="@+id/themes_category_style"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/themes_category_start"
+                    android:background="@drawable/shop_category_start"
                     android:text="@string/themes_category_style"
                     android:textColor="@color/colorGrayBright"
                     android:textSize="12sp" />
@@ -71,7 +71,7 @@
                     android:id="@+id/themes_category_general"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/themes_category_mid"
+                    android:background="@drawable/shop_category_mid"
                     android:text="@string/themes_category_general"
                     android:textColor="@color/colorGrayBright"
                     android:textSize="12sp" />
@@ -80,7 +80,7 @@
                     android:id="@+id/themes_category_special"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/themes_category_mid"
+                    android:background="@drawable/shop_category_mid"
                     android:text="@string/themes_category_special"
                     android:textColor="@color/colorGrayBright"
                     android:textSize="12sp" />
@@ -89,7 +89,7 @@
                     android:id="@+id/themes_category_premium"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/themes_category_end"
+                    android:background="@drawable/shop_category_end"
                     android:text="@string/themes_category_premium"
                     android:textColor="@color/colorGrayBright"
                     android:textSize="12sp" />
@@ -201,7 +201,7 @@
                 android:layout_width="300dp"
                 android:layout_height="120dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/themes_body_board"
+                android:background="@drawable/shop_body_board"
                 android:text="@string/app_no_data"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold" />

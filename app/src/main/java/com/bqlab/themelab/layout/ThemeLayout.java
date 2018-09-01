@@ -25,7 +25,10 @@ import java.util.List;
 public class ThemeLayout extends LinearLayout {
 
     private int accur = 0;
+
     private boolean noto = false;
+    private boolean like = false;
+    private String name;
 
     private TextView themeTopName;
     private TextView themeTopText;
@@ -33,6 +36,7 @@ public class ThemeLayout extends LinearLayout {
     private ImageView themeBody02;
     private ImageView themeBody03;
     private ImageView themeBody04;
+    private LinearLayout themeTopLike;
     private Button themeBottomPreview;
     private Button themeBottomDownload;
     private ArrayList<String> tags;
@@ -66,7 +70,17 @@ public class ThemeLayout extends LinearLayout {
         themeBottomPreview = (Button) findViewById(R.id.theme_bottom_preview);
         themeBottomDownload = (Button) findViewById(R.id.theme_bottom_download);
 
+        themeTopLike = (LinearLayout) findViewById(R.id.theme_top_like);
+        themeTopLike.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ThemeLayout.this.setLike(!ThemeLayout.this.like);
+            }
+        });
+
         this.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        getContext().getSharedPreferences("likedThemes",Context.MODE_PRIVATE).getBoolean(this.name, this.like);
+
     }
 
     @Override
@@ -76,6 +90,7 @@ public class ThemeLayout extends LinearLayout {
 
     public void setThemeName(String themeName) {
         this.themeTopName.setText(themeName);
+        this.name = themeName;
     }
 
     public void setThemeText(String themeText) {
@@ -157,11 +172,28 @@ public class ThemeLayout extends LinearLayout {
         this.noto = noto;
     }
 
+    public void setLike(boolean like) {
+        this.like = like;
+        if (this.like){
+            this.themeTopLike.setBackground(getResources().getDrawable(R.drawable.theme_top_like_p));
+            getContext().getSharedPreferences("likedThemes",Context.MODE_PRIVATE).edit().putBoolean(this.name, this.like).apply();
+            //자식뷰를 바꿔야함
+        }
+        else {
+            this.themeTopLike.setBackground(getResources().getDrawable(R.drawable.theme_top_like_np));
+            getContext().getSharedPreferences("likedThemes",Context.MODE_PRIVATE).edit().putBoolean(this.name, this.like).apply();
+        }
+    }
+
     public List<String> getTags() {
         return tags;
     }
 
     public int getAccuracy() {
         return accur;
+    }
+
+    public boolean getLike() {
+        return like;
     }
 }

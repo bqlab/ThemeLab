@@ -1,7 +1,6 @@
 package com.bqlab.themelab.custom;
 
 import android.content.Context;
-import android.view.View;
 
 import com.bqlab.themelab.R;
 import com.bqlab.themelab.layout.ThemeLayout;
@@ -74,7 +73,7 @@ public class ThemeManager {
         return themes.size();
     }
 
-    public View getThemeView(int position) {
+    public ThemeLayout getThemeLayout(int position) {
         ThemeLayout themeLayout = new ThemeLayout(context);
         themeLayout = this.themes.get(position);
         return themeLayout;

@@ -64,7 +64,7 @@ public class OldSelectActivity extends AppCompatActivity {
         selectBottom = (LinearLayout) findViewById(R.id.select_bottom);
 
         for (int i = 0; i < themeManager.getThemeCount(); i++) {
-            themes.add((ThemeLayout) themeManager.getThemeView(i));
+            themes.add((ThemeLayout) themeManager.getThemeLayout(i));
         }
 
         NetworkDetector networkDetector = new NetworkDetector(this);

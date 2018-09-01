@@ -43,7 +43,7 @@
                 android:layout_width="22dp"
                 android:layout_height="20dp"
                 android:layout_marginBottom="3dp"
-                android:background="@drawable/main_bar_my"
+                android:background="@drawable/main_bar_like_np"
                 tools:ignore="ContentDescription" />
 
             <TextView
@@ -71,7 +71,7 @@
                 android:layout_width="20dp"
                 android:layout_height="22dp"
                 android:layout_marginBottom="3dp"
-                android:background="@drawable/main_bar_themes"
+                android:background="@drawable/main_bar_shop"
                 tools:ignore="ContentDescription" />
 
             <TextView
@@ -99,7 +99,7 @@
                 android:layout_width="23dp"
                 android:layout_height="20dp"
                 android:layout_marginBottom="3dp"
-                android:background="@drawable/main_bar_news"
+                android:background="@drawable/main_bar_news_np"
                 tools:ignore="ContentDescription" />
 
             <TextView
@@ -126,7 +126,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginBottom="3dp"
-                android:background="@drawable/main_bar_setting"
+                android:background="@drawable/main_bar_setting_np"
                 tools:ignore="ContentDescription" />
 
 

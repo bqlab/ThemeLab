@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         mainBody.addView(likeLayout);
         mainBarMyText.setTextColor(getColor(R.color.colorYellow));
-        mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_my_p));
+        mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_like_p));
 
         mainBarMy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
                 mainBody.removeAllViews();
                 mainBody.addView(likeLayout);
 
-                mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_my_p));
-                mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_themes));
-                mainBarNews.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_news));
+                mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_like_p));
+                mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_shop));
+                mainBarNews.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_news_np));
 
                 mainBarMyText.setTextColor(getColor(R.color.colorYellow));
                 mainBarThemesText.setTextColor(getColor(R.color.colorGrayBrighter));
@@ -74,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
                 mainBody.removeAllViews();
                 mainBody.addView(shopLayout);
 
-                mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_my));
-                mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_themes_p));
-                mainBarNews.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_news));
+                mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_like_np));
+                mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_shop_p));
+                mainBarNews.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_news_np));
 
                 mainBarMyText.setTextColor(getColor(R.color.colorGrayBrighter));
                 mainBarThemesText.setTextColor(getColor(R.color.colorYellow));
@@ -89,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
                 mainBody.removeAllViews();
                 mainBody.addView(newsLayout);
 
-                mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_my));
-                mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_themes));
+                mainBarMy.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_like_np));
+                mainBarThemes.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_shop));
                 mainBarNews.getChildAt(0).setBackground(getDrawable(R.drawable.main_bar_news_p));
 
                 mainBarMyText.setTextColor(getColor(R.color.colorGrayBrighter));
