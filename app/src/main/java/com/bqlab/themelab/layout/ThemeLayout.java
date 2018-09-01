@@ -175,12 +175,11 @@ public class ThemeLayout extends LinearLayout {
     public void setLike(boolean like) {
         this.like = like;
         if (this.like){
-            this.themeTopLike.setBackground(getResources().getDrawable(R.drawable.theme_top_like_p));
+            this.themeTopLike.getChildAt(0).setBackground(getResources().getDrawable(R.drawable.theme_top_like_p));
             getContext().getSharedPreferences("likedThemes",Context.MODE_PRIVATE).edit().putBoolean(this.name, this.like).apply();
-            //자식뷰를 바꿔야함
         }
         else {
-            this.themeTopLike.setBackground(getResources().getDrawable(R.drawable.theme_top_like_np));
+            this.themeTopLike.getChildAt(0).setBackground(getResources().getDrawable(R.drawable.theme_top_like_np));
             getContext().getSharedPreferences("likedThemes",Context.MODE_PRIVATE).edit().putBoolean(this.name, this.like).apply();
         }
     }
