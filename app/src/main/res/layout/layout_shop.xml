@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/themes_top"
+            android:id="@+id/shop_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
@@ -30,7 +30,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/themes_top_search"
+                    android:id="@+id/shop_top_search"
                     android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:background="@null"
@@ -44,7 +44,7 @@
                     android:textSize="16sp" />
 
                 <Button
-                    android:id="@+id/themes_top_sort"
+                    android:id="@+id/shop_top_sort"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:background="@drawable/shop_top_sort"
@@ -52,14 +52,14 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/themes_category"
+                android:id="@+id/shop_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/themes_category_style"
+                    android:id="@+id/shop_category_style"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
                     android:background="@drawable/shop_category_start"
@@ -68,7 +68,7 @@
                     android:textSize="12sp" />
 
                 <Button
-                    android:id="@+id/themes_category_general"
+                    android:id="@+id/shop_category_general"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
                     android:background="@drawable/shop_category_mid"
@@ -77,7 +77,7 @@
                     android:textSize="12sp" />
 
                 <Button
-                    android:id="@+id/themes_category_special"
+                    android:id="@+id/shop_category_special"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
                     android:background="@drawable/shop_category_mid"
@@ -86,7 +86,7 @@
                     android:textSize="12sp" />
 
                 <Button
-                    android:id="@+id/themes_category_premium"
+                    android:id="@+id/shop_category_premium"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
                     android:background="@drawable/shop_category_end"
@@ -97,14 +97,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/themes_body"
+            android:id="@+id/shop_body"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/themes_body_today"
+                android:id="@+id/shop_body_today"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -116,7 +116,7 @@
                     android:layout_marginBottom="10dp">
 
                     <TextView
-                        android:id="@+id/themes_body_today_text"
+                        android:id="@+id/shop_body_today_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/themes_body_today_text"
@@ -125,16 +125,16 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/themes_body_today_hint"
+                        android:id="@+id/shop_body_today_hint"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/themes_body_today_text"
+                        android:layout_below="@id/shop_body_today_text"
                         android:text="@string/themes_body_today_hint"
                         android:textColor="@color/colorGrayBright"
                         android:textSize="13sp" />
 
                     <Button
-                        android:id="@+id/themes_body_today_more"
+                        android:id="@+id/shop_body_today_more"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -196,7 +196,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/themes_body_board"
+                android:id="@+id/shop_body_board"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="300dp"
                 android:layout_height="120dp"
@@ -208,53 +208,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/shop_body_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <com.bqlab.themelab.layout.ThemeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <com.bqlab.themelab.layout.ThemeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <com.bqlab.themelab.layout.ThemeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <com.bqlab.themelab.layout.ThemeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <com.bqlab.themelab.layout.ThemeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <com.bqlab.themelab.layout.ThemeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ProgressBar
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="20dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_no_data"
-                android:textColor="@color/colorGrayBright"
-                android:textSize="13sp" />
-        </LinearLayout>
+            android:orientation="vertical" />
     </LinearLayout>
 </ScrollView>

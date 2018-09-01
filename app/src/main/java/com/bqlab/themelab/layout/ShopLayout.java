@@ -3,12 +3,23 @@ package com.bqlab.themelab.layout;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.bqlab.themelab.R;
 
 public class ShopLayout extends FrameLayout {
+
+    LinearLayout shopTopSearch;
+    Button shopTopSort;
+    Button shopCategoryStyle;
+    Button shopCategoryGeneral;
+    Button shopCategorySpecial;
+    Button shopCategoryPremium;
+    Button shopBodyTodayMore;
+    Button shopBodyBoard;
+    LinearLayout shopBodyList;
 
     public ShopLayout(Context context) {
         super(context);
@@ -27,6 +38,8 @@ public class ShopLayout extends FrameLayout {
 
     private void init(AttributeSet attrs, int defStyle) {
         setLayoutInflation();
+
+        shopBodyList = (LinearLayout) findViewById(R.id.shop_body_list);
     }
 
     private void setLayoutInflation() {
