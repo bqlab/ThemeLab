@@ -8,10 +8,12 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.bqlab.themelab.R;
+import com.bqlab.themelab.custom.ThemeManager;
+
+import java.util.ArrayList;
 
 public class ShopLayout extends FrameLayout {
 
-    LinearLayout shopTopSearch;
     Button shopTopSort;
     Button shopCategoryStyle;
     Button shopCategoryGeneral;
@@ -19,7 +21,12 @@ public class ShopLayout extends FrameLayout {
     Button shopCategoryPremium;
     Button shopBodyTodayMore;
     Button shopBodyBoard;
+
+    LinearLayout shopTopSearch;
     LinearLayout shopBodyList;
+
+    ThemeManager themeManager;
+    ArrayList<ThemeLayout> themes = new ArrayList<ThemeLayout>();
 
     public ShopLayout(Context context) {
         super(context);
@@ -39,7 +46,17 @@ public class ShopLayout extends FrameLayout {
     private void init(AttributeSet attrs, int defStyle) {
         setLayoutInflation();
 
-        shopBodyList = (LinearLayout) findViewById(R.id.shop_body_list);
+        themeManager = new ThemeManager(getContext());
+
+        shopBodyList = findViewById(R.id.shop_body_list);
+
+        for (int i = 0; i < themeManager.getThemeCount(); i++) {
+            themes.add(themeManager.getThemeLayout(i));
+        }
+
+        for (int i = 0; i < themes.size(); i++) {
+            shopBodyList.addView(themes.get(i));
+        }
     }
 
     private void setLayoutInflation() {

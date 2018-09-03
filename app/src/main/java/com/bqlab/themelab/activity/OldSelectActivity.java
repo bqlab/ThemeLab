@@ -10,14 +10,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.bqlab.themelab.R;
 import com.bqlab.themelab.custom.ApplicationDetector;
-import com.bqlab.themelab.custom.NetworkDetector;
 import com.bqlab.themelab.custom.ThemeManager;
-import com.bqlab.themelab.layout.ThemeNoneLayout;
 import com.bqlab.themelab.layout.ThemeLayout;
+import com.bqlab.themelab.layout.ThemeNoneLayout;
 
 import java.util.ArrayList;
 
@@ -63,15 +61,11 @@ public class OldSelectActivity extends AppCompatActivity {
         selectBody = (LinearLayout) findViewById(R.id.select_body);
         selectBottom = (LinearLayout) findViewById(R.id.select_bottom);
 
+        setTopButtons();
+
         for (int i = 0; i < themeManager.getThemeCount(); i++) {
             themes.add((ThemeLayout) themeManager.getThemeLayout(i));
         }
-
-        NetworkDetector networkDetector = new NetworkDetector(this);
-        if (!networkDetector.isConnected()) {
-            Toast.makeText(OldSelectActivity.this, "네트워크에 접속할 수 없습니다.", Toast.LENGTH_SHORT).show();
-        }
-        setTopButtons();
 
         for (int i = 0; i < themes.size(); i++) {
             selectBody.addView(themes.get(i));
