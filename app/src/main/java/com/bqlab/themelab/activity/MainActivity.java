@@ -28,6 +28,34 @@ public class MainActivity extends AppCompatActivity {
     static NewsLayout newsLayout;
     static ShopLayout shopLayout;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        hasGoogleDrive();
+        setMainBar();
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder b = new AlertDialog.Builder(this);
+        b.setMessage("앱을 종료하시겠습니까?");
+        b.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finishAffinity();
+            }
+        });
+        b.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        b.setView(new AdLayout(this));
+        b.show();
+    }
+
     private void hasGoogleDrive() {
         if (!new ApplicationDetector(this).hasApplication("com.google.android.apps.docs")) {
             startActivity(new Intent(this, StartActivity.class));
@@ -104,33 +132,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, SettingActivity.class));
             }
         });
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        hasGoogleDrive();
-        setMainBar();
-    }
-
-    @Override
-    public void onBackPressed() {
-        AlertDialog.Builder b = new AlertDialog.Builder(this);
-        b.setMessage("앱을 종료하시겠습니까?");
-        b.setPositiveButton("확인", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                finishAffinity();
-            }
-        });
-        b.setNegativeButton("취소", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        b.setView(new AdLayout(this));
-        b.show();
     }
 }
