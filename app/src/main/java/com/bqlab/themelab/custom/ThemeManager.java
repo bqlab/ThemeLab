@@ -78,4 +78,8 @@ public class ThemeManager {
         themeLayout = this.themes.get(position);
         return themeLayout;
     }
+
+    public ArrayList<ThemeLayout> getThemes() {
+        return themes;
+    }
 }

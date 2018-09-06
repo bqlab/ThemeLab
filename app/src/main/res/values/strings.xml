@@ -10,15 +10,16 @@
     <string name="main_bar_news">소식</string>
     <string name="main_bar_setting">설정</string>
 
-    <string name="themes_search_bar">전체에서 테마 검색</string>
-    <string name="themes_search_text">에서 테마 검색</string>
-    <string name="themes_category_style">스타일</string>
-    <string name="themes_category_general">일반</string>
-    <string name="themes_category_special">스페셜</string>
-    <string name="themes_category_premium">프리미엄</string>
-    <string name="themes_body_today_text">오늘의 추천</string>
-    <string name="themes_body_today_hint">하루에 한번, 셔플하여 추천</string>
-    <string name="themes_body_today_more">더 보기</string>
+    <string name="shop_search_bar">전체에서 테마 검색</string>
+    <string name="shop_search_text">에서 테마 검색</string>
+    <string name="shop_category_style">스타일</string>
+    <string name="shop_category_general">일반</string>
+    <string name="shop_category_special">스페셜</string>
+    <string name="shop_category_premium">프리미엄</string>
+    <string name="shop_body_today_text">오늘의 추천</string>
+    <string name="shop_body_today_hint">하루에 한번, 셔플하여 추천</string>
+    <string name="shop_body_today_more">더 보기</string>
+    <string name="shop_no_result">검색어를 다시 확인해보시길 바랍니다. 띄어쓰기나 철자가 잘못되었을 경우 검색 결과가 부정확할 수 있습니다. 만약 정확하게 입력했음에도 결과가 나오지 않았다면 개발자의 페이스북 페이지를 통해 문의하시길 바랍니다.</string>
 
     <!--
     <string name="main_search_hint">예: 심플테마, 핑크, 우주</string>

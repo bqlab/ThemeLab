@@ -34,11 +34,11 @@
                     android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:hint="@string/themes_search_bar"
+                    android:hint="@string/shop_search_bar"
+                    android:imeOptions="actionSearch"
                     android:inputType="text"
                     android:paddingBottom="3dp"
                     android:paddingEnd="10dp"
-                    android:imeOptions="actionSearch"
                     android:paddingStart="15dp"
                     android:singleLine="true"
                     android:textColor="@color/colorBlack"
@@ -63,8 +63,8 @@
                     android:id="@+id/shop_category_style"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/shop_category_start"
-                    android:text="@string/themes_category_style"
+                    android:background="@drawable/shop_category_start_np"
+                    android:text="@string/shop_category_style"
                     android:textColor="@color/colorGrayBright"
                     android:textSize="12sp" />
 
@@ -72,8 +72,8 @@
                     android:id="@+id/shop_category_general"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/shop_category_mid"
-                    android:text="@string/themes_category_general"
+                    android:background="@drawable/shop_category_mid_np"
+                    android:text="@string/shop_category_general"
                     android:textColor="@color/colorGrayBright"
                     android:textSize="12sp" />
 
@@ -81,8 +81,8 @@
                     android:id="@+id/shop_category_special"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/shop_category_mid"
-                    android:text="@string/themes_category_special"
+                    android:background="@drawable/shop_category_mid_np"
+                    android:text="@string/shop_category_special"
                     android:textColor="@color/colorGrayBright"
                     android:textSize="12sp" />
 
@@ -90,8 +90,8 @@
                     android:id="@+id/shop_category_premium"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/shop_category_end"
-                    android:text="@string/themes_category_premium"
+                    android:background="@drawable/shop_category_end_np"
+                    android:text="@string/shop_category_premium"
                     android:textColor="@color/colorGrayBright"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -120,7 +120,7 @@
                         android:id="@+id/shop_body_today_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/themes_body_today_text"
+                        android:text="@string/shop_body_today_text"
                         android:textColor="@color/colorGray"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -130,7 +130,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/shop_body_today_text"
-                        android:text="@string/themes_body_today_hint"
+                        android:text="@string/shop_body_today_hint"
                         android:textColor="@color/colorGrayBright"
                         android:textSize="13sp" />
 
@@ -142,7 +142,7 @@
                         android:background="@color/colorTransparent"
                         android:minHeight="0dp"
                         android:minWidth="0dp"
-                        android:text="@string/themes_body_today_more"
+                        android:text="@string/shop_body_today_more"
                         android:textColor="@color/colorBlueGreenBright"
                         android:textSize="13sp"
                         android:textStyle="bold"
