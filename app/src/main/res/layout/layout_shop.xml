@@ -8,7 +8,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
@@ -60,12 +59,12 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/shop_category_style"
+                    android:id="@+id/shop_category_total"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/shop_category_start_np"
-                    android:text="@string/shop_category_style"
-                    android:textColor="@color/colorGrayBright"
+                    android:background="@drawable/shop_category_start_p"
+                    android:text="@string/shop_category_total"
+                    android:textColor="@color/colorWhiteDark"
                     android:textSize="12sp" />
 
                 <Button
@@ -78,20 +77,20 @@
                     android:textSize="12sp" />
 
                 <Button
-                    android:id="@+id/shop_category_special"
+                    android:id="@+id/shop_category_style"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
                     android:background="@drawable/shop_category_mid_np"
-                    android:text="@string/shop_category_special"
+                    android:text="@string/shop_category_style"
                     android:textColor="@color/colorGrayBright"
                     android:textSize="12sp" />
 
                 <Button
-                    android:id="@+id/shop_category_premium"
+                    android:id="@+id/shop_category_special"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
                     android:background="@drawable/shop_category_end_np"
-                    android:text="@string/shop_category_premium"
+                    android:text="@string/shop_category_special"
                     android:textColor="@color/colorGrayBright"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -219,6 +218,7 @@
             android:id="@+id/shop_body_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
             android:gravity="center_horizontal"
             android:orientation="vertical" />
     </LinearLayout>

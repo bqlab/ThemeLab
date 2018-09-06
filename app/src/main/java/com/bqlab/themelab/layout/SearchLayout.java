@@ -2,13 +2,14 @@ package com.bqlab.themelab.layout;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.support.v4.widget.DrawerLayout;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
 import com.bqlab.themelab.R;
 
-public class SearchLayout extends LinearLayout {
+public class SearchLayout extends DrawerLayout {
 
     public SearchLayout(Context context) {
         super(context);

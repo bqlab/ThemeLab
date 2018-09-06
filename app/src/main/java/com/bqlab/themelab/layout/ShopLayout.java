@@ -25,10 +25,10 @@ import java.util.ArrayList;
 public class ShopLayout extends FrameLayout {
 
     Button shopTopSort;
-    Button shopCategoryStyle;
+    Button shopCategoryTotal;
     Button shopCategoryGeneral;
+    Button shopCategoryStyle;
     Button shopCategorySpecial;
-    Button shopCategoryPremium;
     Button shopBodyTodayMore;
     Button shopBodyBoard;
     LinearLayout shopBodyList;
@@ -67,10 +67,10 @@ public class ShopLayout extends FrameLayout {
     private void setMembers() {
         themes = new ThemeManager(getContext()).getThemes();
         shopTopSearch = findViewById(R.id.shop_top_search);
-        shopCategoryStyle = findViewById(R.id.shop_category_style);
+        shopCategoryTotal = findViewById(R.id.shop_category_total);
         shopCategoryGeneral = findViewById(R.id.shop_category_general);
+        shopCategoryStyle = findViewById(R.id.shop_category_style);
         shopCategorySpecial = findViewById(R.id.shop_category_special);
-        shopCategoryPremium = findViewById(R.id.shop_category_premium);
         shopBodyList = findViewById(R.id.shop_body_list);
     }
 
@@ -88,23 +88,41 @@ public class ShopLayout extends FrameLayout {
     }
 
     private void setShopCategoryLayouts() {
-        shopCategoryStyle.setOnClickListener(new OnClickListener() {
+        shopCategoryTotal.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 shopBodyList.removeAllViews();
 
-                shopCategoryStyle.setBackground(getResources().getDrawable(R.drawable.shop_category_start_p));
+                shopCategoryTotal.setBackground(getResources().getDrawable(R.drawable.shop_category_start_p));
                 shopCategoryGeneral.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_np));
-                shopCategorySpecial.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_np));
-                shopCategoryPremium.setBackground(getResources().getDrawable(R.drawable.shop_category_end_np));
+                shopCategoryStyle.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_np));
+                shopCategorySpecial.setBackground(getResources().getDrawable(R.drawable.shop_category_end_np));
 
-                shopCategoryStyle.setTextColor(getResources().getColor(R.color.colorWhite));
+                shopCategoryTotal.setTextColor(getResources().getColor(R.color.colorWhiteDark));
                 shopCategoryGeneral.setTextColor(getResources().getColor(R.color.colorGrayBright));
+                shopCategoryStyle.setTextColor(getResources().getColor(R.color.colorGrayBright));
                 shopCategorySpecial.setTextColor(getResources().getColor(R.color.colorGrayBright));
-                shopCategoryPremium.setTextColor(getResources().getColor(R.color.colorGrayBright));
+
+                showAllThemes();
+            }
+        });
+        shopCategoryGeneral.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                shopBodyList.removeAllViews();
+
+                shopCategoryTotal.setBackground(getResources().getDrawable(R.drawable.shop_category_start_np));
+                shopCategoryGeneral.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_p));
+                shopCategoryStyle.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_np));
+                shopCategorySpecial.setBackground(getResources().getDrawable(R.drawable.shop_category_end_np));
+
+                shopCategoryTotal.setTextColor(getResources().getColor(R.color.colorGrayBright));
+                shopCategoryGeneral.setTextColor(getResources().getColor(R.color.colorWhiteDark));
+                shopCategoryStyle.setTextColor(getResources().getColor(R.color.colorGrayBright));
+                shopCategorySpecial.setTextColor(getResources().getColor(R.color.colorGrayBright));
 
                 for (int i = 0; i < themes.size(); i++) {
-                    if (themes.get(i).getTags().contains("스타일테마")) {
+                    if (themes.get(i).getTags().contains("일반테마")) {
                         shopBodyList.addView(themes.get(i));
                     }
                 }
@@ -121,23 +139,23 @@ public class ShopLayout extends FrameLayout {
                 }
             }
         });
-        shopCategoryGeneral.setOnClickListener(new OnClickListener() {
+        shopCategoryStyle.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 shopBodyList.removeAllViews();
 
-                shopCategoryStyle.setBackground(getResources().getDrawable(R.drawable.shop_category_start_np));
-                shopCategoryGeneral.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_p));
-                shopCategorySpecial.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_np));
-                shopCategoryPremium.setBackground(getResources().getDrawable(R.drawable.shop_category_end_np));
+                shopCategoryTotal.setBackground(getResources().getDrawable(R.drawable.shop_category_start_np));
+                shopCategoryGeneral.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_np));
+                shopCategoryStyle.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_p));
+                shopCategorySpecial.setBackground(getResources().getDrawable(R.drawable.shop_category_end_np));
 
-                shopCategoryStyle.setTextColor(getResources().getColor(R.color.colorGrayBright));
-                shopCategoryGeneral.setTextColor(getResources().getColor(R.color.colorWhite));
+                shopCategoryTotal.setTextColor(getResources().getColor(R.color.colorGrayBright));
+                shopCategoryGeneral.setTextColor(getResources().getColor(R.color.colorGrayBright));
+                shopCategoryStyle.setTextColor(getResources().getColor(R.color.colorWhiteDark));
                 shopCategorySpecial.setTextColor(getResources().getColor(R.color.colorGrayBright));
-                shopCategoryPremium.setTextColor(getResources().getColor(R.color.colorGrayBright));
 
                 for (int i = 0; i < themes.size(); i++) {
-                    if (themes.get(i).getTags().contains("일반테마")) {
+                    if (themes.get(i).getTags().contains("스타일테마")) {
                         shopBodyList.addView(themes.get(i));
                     }
                 }
@@ -159,51 +177,18 @@ public class ShopLayout extends FrameLayout {
             public void onClick(View view) {
                 shopBodyList.removeAllViews();
 
-                shopCategoryStyle.setBackground(getResources().getDrawable(R.drawable.shop_category_start_np));
+                shopCategoryTotal.setBackground(getResources().getDrawable(R.drawable.shop_category_start_np));
                 shopCategoryGeneral.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_np));
-                shopCategorySpecial.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_p));
-                shopCategoryPremium.setBackground(getResources().getDrawable(R.drawable.shop_category_end_np));
+                shopCategoryStyle.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_np));
+                shopCategorySpecial.setBackground(getResources().getDrawable(R.drawable.shop_category_end_p));
 
-                shopCategoryStyle.setTextColor(getResources().getColor(R.color.colorGrayBright));
+                shopCategoryTotal.setTextColor(getResources().getColor(R.color.colorGrayBright));
                 shopCategoryGeneral.setTextColor(getResources().getColor(R.color.colorGrayBright));
-                shopCategorySpecial.setTextColor(getResources().getColor(R.color.colorWhite));
-                shopCategoryPremium.setTextColor(getResources().getColor(R.color.colorGrayBright));
+                shopCategoryStyle.setTextColor(getResources().getColor(R.color.colorGrayBright));
+                shopCategorySpecial.setTextColor(getResources().getColor(R.color.colorWhiteDark));
 
                 for (int i = 0; i < themes.size(); i++) {
                     if (themes.get(i).getTags().contains("스페셜테마")) {
-                        shopBodyList.addView(themes.get(i));
-                    }
-                }
-                if (shopBodyList.getChildCount() == 0) {
-                    AlertDialog.Builder b = new AlertDialog.Builder(getContext());
-                    b.setMessage(getResources().getString(R.string.app_no_data));
-                    b.setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            showAllThemes();
-                        }
-                    });
-                    b.show();
-                }
-            }
-        });
-        shopCategoryPremium.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                shopBodyList.removeAllViews();
-
-                shopCategoryStyle.setBackground(getResources().getDrawable(R.drawable.shop_category_start_np));
-                shopCategoryGeneral.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_np));
-                shopCategorySpecial.setBackground(getResources().getDrawable(R.drawable.shop_category_mid_np));
-                shopCategoryPremium.setBackground(getResources().getDrawable(R.drawable.shop_category_end_p));
-
-                shopCategoryStyle.setTextColor(getResources().getColor(R.color.colorGrayBright));
-                shopCategoryGeneral.setTextColor(getResources().getColor(R.color.colorGrayBright));
-                shopCategorySpecial.setTextColor(getResources().getColor(R.color.colorGrayBright));
-                shopCategoryPremium.setTextColor(getResources().getColor(R.color.colorWhite));
-
-                for (int i = 0; i < themes.size(); i++) {
-                    if (themes.get(i).getTags().contains("프리미엄테마")) {
                         shopBodyList.addView(themes.get(i));
                     }
                 }
