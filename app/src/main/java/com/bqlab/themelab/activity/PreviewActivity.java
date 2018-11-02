@@ -25,14 +25,7 @@ public class PreviewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preview);
-
-        Intent intent = getIntent();
-        previewArray = intent.getIntegerArrayListExtra("imageIds");
-
-        gestureDetectorCompat = new GestureDetectorCompat(this, new PreviewImageViewer());
-
-        previewImage = (ImageView) findViewById(R.id.preview_image);
-        previewImage.setBackground(getResources().getDrawable(previewArray.get(arrayIndex)));
+        init();
     }
 
     @Override
@@ -62,5 +55,15 @@ public class PreviewActivity extends AppCompatActivity {
             }
             return true;
         }
+    }
+
+    private void init() {
+        Intent intent = getIntent();
+        previewArray = intent.getIntegerArrayListExtra("imageIds");
+
+        gestureDetectorCompat = new GestureDetectorCompat(this, new PreviewImageViewer());
+
+        previewImage = (ImageView) findViewById(R.id.preview_image);
+        previewImage.setBackground(getResources().getDrawable(previewArray.get(arrayIndex)));
     }
 }

@@ -22,37 +22,22 @@ public class EventLayout extends LinearLayout {
 
     public EventLayout(Context context) {
         super(context);
+        init(context);
+    }
+
+    private void init(Context context) {
         this.context = context;
-        init(null, 0);
-    }
-
-    public EventLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init(attrs, 0);
-    }
-
-    public EventLayout(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-        init(attrs, defStyle);
-    }
-
-    private void init(AttributeSet attrs, int defStyle) {
         LayoutInflater.from(getContext()).inflate(R.layout.layout_event, this);
         eventViewButton = (Button) findViewById(R.id.view_event_button);
         eventViewButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context, NoticeActivity.class);
+                Intent i = new Intent(EventLayout.this.context, NoticeActivity.class);
                 i.putExtra("title", EventLayout.this.title);
                 i.putExtra("content", EventLayout.this.content);
-                context.startActivity(i);
+                EventLayout.this.context.startActivity(i);
             }
         });
-    }
-
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
     }
 
     public void setTitle(String title) {

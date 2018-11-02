@@ -10,6 +10,8 @@ import android.widget.Button;
 import com.bqlab.themelab.R;
 import com.bqlab.themelab.custom.ApplicationDetector;
 
+import java.util.Objects;
+
 public class ContactActivity extends AppCompatActivity {
 
     Button contactFB;
@@ -20,10 +22,11 @@ public class ContactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+        setActionBar();
+        init();
+    }
 
-        getSupportActionBar().setTitle(R.string.contact_actionbar_title);
-        getSupportActionBar().setHomeButtonEnabled(true);
-
+    private void init() {
         contactFB = (Button) findViewById(R.id.contact_btn_fb);
         contactIG = (Button) findViewById(R.id.contact_btn_ig);
         contactNB = (Button) findViewById(R.id.contact_btn_nb);
@@ -54,5 +57,10 @@ public class ContactActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
             }
         });
+    }
+
+    private void setActionBar() {
+        Objects.requireNonNull(getSupportActionBar()).setTitle(R.string.contact_actionbar_title);
+        getSupportActionBar().setHomeButtonEnabled(true);
     }
 }

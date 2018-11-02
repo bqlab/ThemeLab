@@ -3,8 +3,6 @@ package com.bqlab.themelab.layout;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,10 +12,8 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bqlab.themelab.R;
-import com.bqlab.themelab.activity.OldSearchActivity;
 import com.bqlab.themelab.custom.ThemeManager;
 
 import java.util.ArrayList;
@@ -25,52 +21,43 @@ import java.util.ArrayList;
 public class ShopLayout extends FrameLayout {
 
     Button shopTopSort;
+    EditText shopTopSearch;
+
     Button shopCategoryTotal;
     Button shopCategoryGeneral;
     Button shopCategoryStyle;
     Button shopCategorySpecial;
+
     Button shopBodyTodayMore;
     Button shopBodyBoard;
+    LinearLayout shopBody;
     LinearLayout shopBodyList;
-    EditText shopTopSearch;
+
     ThemeManager themeManager;
     ArrayList<ThemeLayout> themes = new ArrayList<ThemeLayout>();
 
     public ShopLayout(Context context) {
         super(context);
-        init(null, 0);
-    }
-
-    public ShopLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init(attrs, 0);
-    }
-
-    public ShopLayout(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-        init(attrs, defStyle);
-    }
-
-    private void init(AttributeSet attrs, int defStyle) {
-        setLayoutInflation();
-        setMembers();
+        init();
         setShopTopLayouts();
         setShopCategoryLayouts();
         showAllThemes();
     }
 
-    private void setLayoutInflation() {
-        LayoutInflater.from(getContext()).inflate(R.layout.layout_shop, this);
-        this.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
-    }
-
-    private void setMembers() {
+    private void init() {
         themes = new ThemeManager(getContext()).getThemes();
+        LayoutInflater.from(getContext()).inflate(R.layout.layout_shop, this);
+
         shopTopSearch = findViewById(R.id.shop_top_search);
+
         shopCategoryTotal = findViewById(R.id.shop_category_total);
         shopCategoryGeneral = findViewById(R.id.shop_category_general);
         shopCategoryStyle = findViewById(R.id.shop_category_style);
         shopCategorySpecial = findViewById(R.id.shop_category_special);
+
+        shopBody = findViewById(R.id.shop_body);
+        shopBodyTodayMore = findViewById(R.id.shop_body_today_more);
+        shopBodyBoard = findViewById(R.id.shop_body_board);
         shopBodyList = findViewById(R.id.shop_body_list);
     }
 
@@ -79,8 +66,10 @@ public class ShopLayout extends FrameLayout {
             @Override
             public boolean onEditorAction(TextView textView, int actionID, KeyEvent keyEvent) {
                 if (actionID == EditorInfo.IME_ACTION_SEARCH) {
-                    shopBodyList.removeAllViews();
-                    searchByWords(shopTopSearch.getText().toString());
+                    String s = shopTopSearch.getText().toString();
+                    if (s.equals(""))
+                        return false;
+                    searchByWords(s);
                 }
                 return false;
             }
@@ -251,16 +240,8 @@ public class ShopLayout extends FrameLayout {
                 shopBodyList.addView(results.get(i));
             }
         } else {
-            AlertDialog.Builder b = new AlertDialog.Builder(getContext());
-            b.setTitle("검색된 결과가 없습니다.");
-            b.setMessage(getResources().getString(R.string.shop_no_result));
-            b.setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    showAllThemes();
-                }
-            });
-            b.show();
+            shopBodyList.removeAllViews();
+            shopBodyList.addView(new ThemeNoneLayout(getContext()));
         }
     }
 }

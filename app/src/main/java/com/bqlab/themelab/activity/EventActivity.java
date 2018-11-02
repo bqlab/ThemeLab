@@ -7,6 +7,8 @@ import android.widget.LinearLayout;
 import com.bqlab.themelab.R;
 import com.bqlab.themelab.layout.EventLayout;
 
+import java.util.Objects;
+
 public class EventActivity extends AppCompatActivity {
 
     LinearLayout eventBody;
@@ -15,10 +17,11 @@ public class EventActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
+        setActionbar();
+        manageEvents();
+    }
 
-        getSupportActionBar().setTitle(R.string.event_actionbar_title);
-        getSupportActionBar().setHomeButtonEnabled(true);
-
+    private void manageEvents() {
         eventBody = (LinearLayout) findViewById(R.id.event_body);
 
         EventLayout n0001 = new EventLayout(this);
@@ -62,4 +65,8 @@ public class EventActivity extends AppCompatActivity {
         eventBody.addView(n0008);
     }
 
+    private void setActionbar() {
+        Objects.requireNonNull(getSupportActionBar()).setTitle(R.string.event_actionbar_title);
+        getSupportActionBar().setHomeButtonEnabled(true);
+    }
 }

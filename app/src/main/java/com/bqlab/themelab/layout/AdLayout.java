@@ -12,26 +12,10 @@ public class AdLayout extends LinearLayout {
 
     public AdLayout(Context context) {
         super(context);
-        init(null, 0);
+        init();
     }
 
-    public AdLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init(attrs, 0);
-    }
-
-    public AdLayout(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-        init(attrs, defStyle);
-    }
-
-    private void init(AttributeSet attrs, int defStyle) {
+    private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.layout_ad, this);
-        this.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
-    }
-
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
     }
 }

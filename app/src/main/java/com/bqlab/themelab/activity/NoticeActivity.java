@@ -15,7 +15,10 @@ public class NoticeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notice);
+        init();
+    }
 
+    private void init() {
         Intent intent = getIntent();
 
         String title = intent.getStringExtra("title");

@@ -19,7 +19,10 @@ public class SettingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
+        init();
+    }
 
+    private void init() {
         getSupportActionBar().setTitle(R.string.setting_actionbar_title);
         getSupportActionBar().setHomeButtonEnabled(true);
 

@@ -15,27 +15,11 @@ public class SearchCountLayout extends LinearLayout {
 
     public SearchCountLayout(Context context) {
         super(context);
-        init(null, 0);
+        init();
     }
 
-    public SearchCountLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init(attrs, 0);
-    }
-
-    public SearchCountLayout(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-        init(attrs, defStyle);
-    }
-
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-    }
-
-    private void init(AttributeSet attrs, int defStyle) {
+    private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.layout_search_count, this);
-        this.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
     }
 
     public void setView(int count) {

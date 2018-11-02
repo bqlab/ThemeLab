@@ -20,14 +20,7 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-
-        Button startDownload = (Button) findViewById(R.id.start_download);
-        startDownload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.start_download_url))));
-            }
-        });
+        init();
     }
 
     @Override
@@ -51,4 +44,13 @@ public class StartActivity extends AppCompatActivity {
         }.start();
     }
 
+    private void init() {
+        Button startDownload = (Button) findViewById(R.id.start_download);
+        startDownload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.start_download_url))));
+            }
+        });
+    }
 }

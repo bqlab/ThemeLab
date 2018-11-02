@@ -43,20 +43,10 @@ public class ThemeLayout extends LinearLayout {
 
     public ThemeLayout(Context context) {
         super(context);
-        init(null, 0);
+        init();
     }
 
-    public ThemeLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init(attrs, 0);
-    }
-
-    public ThemeLayout(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-        init(attrs, defStyle);
-    }
-
-    private void init(AttributeSet attrs, int defStyle) {
+    private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.layout_theme, this);
 
         themeTopName = (TextView) findViewById(R.id.theme_top_name);

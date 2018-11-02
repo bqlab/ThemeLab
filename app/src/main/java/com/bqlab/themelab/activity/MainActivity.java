@@ -24,16 +24,16 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout mainBarNews;
     LinearLayout mainBarSetting;
 
-    static LikeLayout likeLayout;
-    static NewsLayout newsLayout;
-    static ShopLayout shopLayout;
+    LikeLayout likeLayout;
+    NewsLayout newsLayout;
+    ShopLayout shopLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         hasGoogleDrive();
-        setMainBar();
+        init();
     }
 
     @Override
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void setMainBar() {
+    private void init() {
         mainBody = (LinearLayout) findViewById(R.id.main_body);
         mainBarMy = (LinearLayout) findViewById(R.id.main_bar_my);
         mainBarThemes = (LinearLayout) findViewById(R.id.main_bar_themes);

@@ -19,6 +19,11 @@ public class TutorialActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
+        init();
+    }
+
+    @SuppressLint("SetJavaScriptEnabled")
+    private void init() {
 
         getSupportActionBar().setTitle(R.string.tutorial_actionbar_title);
         getSupportActionBar().setHomeButtonEnabled(true);

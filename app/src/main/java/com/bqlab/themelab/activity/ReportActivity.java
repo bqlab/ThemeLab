@@ -19,7 +19,11 @@ public class ReportActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
+        init();
+    }
 
+    @SuppressLint("SetJavaScriptEnabled")
+    private void init() {
         getSupportActionBar().setTitle(R.string.report_actionbar_title);
         getSupportActionBar().setHomeButtonEnabled(true);
 
